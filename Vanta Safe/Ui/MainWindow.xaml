@@ -1,0 +1,77 @@
+﻿<Window x:Class="Vanta_Safe.MainWindow"
+       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+       xmlns:local="clr-namespace:Vanta_Safe"
+       mc:Ignorable="d"
+       Title="MainWindow" Height="450" Width="800"
+       WindowState="Maximized"
+        >
+
+    <Window.Background>
+        <ImageBrush ImageSource="G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\Assets\venta-black.jpg" Stretch="UniformToFill"/>
+    </Window.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <TextBlock Text="Welcome to VantaSafe" 
+                   Foreground="#00FF00" 
+                   FontSize="30" 
+                   HorizontalAlignment="Center" 
+                   Margin="0,30,0,10"
+                   FontWeight="Bold"/>
+
+        <!-- Blinking Emoji -->
+        <TextBlock x:Name="SecurityEmoji"
+                   Text="🔒"
+                   FontSize="50"
+                   HorizontalAlignment="Center"
+                   Foreground="#00FF00" 
+                   Grid.Row="1"
+                   Margin="0,20,0,10"
+                   Opacity="1" RenderTransformOrigin="0.552,0.995">
+            <TextBlock.Triggers>
+                <EventTrigger RoutedEvent="Loaded">
+                    <BeginStoryboard>
+                        <Storyboard RepeatBehavior="Forever" AutoReverse="True">
+                            <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                                             From="1" To="0" Duration="0:0:1.2" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </TextBlock.Triggers>
+        </TextBlock>
+
+        <!-- Buttons -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,41,0,0">
+            <Border CornerRadius="2" BorderThickness="2" BorderBrush="Black" Margin="10">
+                <Button Content="Register"
+            Background="Black"
+            Foreground="#00FF00"
+            FontWeight="Bold"
+            BorderThickness="0"
+            Cursor="Hand" Height="104" Width="100"
+            Click="RegisterClick"            
+                        />
+                
+            </Border>
+
+
+            <Border CornerRadius="2" BorderThickness="2" BorderBrush="Black" Margin="10">
+                <Button Content="Login"
+            Background="Black"
+            Foreground="#00FF00"
+            FontWeight="Bold"
+            BorderThickness="0"
+            Cursor="Hand" Width="100"
+                        Click="LoginClick"/>
+            </Border>
+        </StackPanel>
+    </Grid>
+</Window>

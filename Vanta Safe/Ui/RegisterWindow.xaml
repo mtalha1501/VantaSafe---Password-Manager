@@ -1,0 +1,91 @@
+﻿<Window x:Class="Vanta_Safe.Ui.RegisterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Register" 
+        Height="450" 
+        Width="800"
+        WindowStartupLocation="CenterScreen"
+        WindowState="Maximized"
+        >
+
+    <Window.Background>
+        <ImageBrush ImageSource="G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\Assets\venta-black.jpg" Stretch="UniformToFill"/>
+    </Window.Background>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="btnBack" Content="←" 
+        HorizontalAlignment="Left" VerticalAlignment="Top"
+        Margin="20,20,0,0" Width="40" Height="40"
+        Background="Transparent" Foreground="#00FF00"
+        BorderThickness="0" FontSize="20"
+        Click="BtnBack_Click"/>
+        <!-- Header -->
+        <TextBlock Text="Create Master Account" 
+                   Foreground="#00FF00" 
+                   FontSize="24" 
+                   HorizontalAlignment="Center" 
+                   Margin="0,30,0,20"
+                   FontWeight="Bold"/>
+
+        <!-- Registration Form -->
+        <StackPanel Grid.Row="1" 
+                    VerticalAlignment="Center" 
+                    HorizontalAlignment="Center" 
+                    Width="350">
+
+            <!-- Username Field -->
+            <TextBox x:Name="txtUsername" 
+                     Style="{StaticResource HintTextbox}"
+                     Tag="Username"
+                     Margin="0,0,0,10"/>
+
+            <!-- Master Password Field -->
+            <PasswordBox x:Name="txtPassword" 
+                         Style="{StaticResource HintPasswordBox}"
+                         Tag="Master Password"
+                         Margin="0,0,0,10"/>
+
+            <!-- Confirm Password Field -->
+            <PasswordBox x:Name="txtConfirmPassword" 
+                         Style="{StaticResource HintPasswordBox}"
+                         Tag="Confirm Master Password"
+                         Margin="0,0,0,20"/>
+            <!-- Inside the <StackPanel>, after confirm password -->
+            <TextBlock Margin="140,10,0,20" HorizontalAlignment="Center">
+    <Hyperlink x:Name="linkLogin" Click="LinkLogin_Click"
+               Foreground="#00FF00" TextDecorations="Underline">
+        Already Registered? → Login
+    </Hyperlink>
+            </TextBlock>
+
+            <!-- Password Requirements -->
+            <TextBlock Text="• Minimum 12 characters&#x0a;• At least 1 uppercase letter&#x0a;• At least 1 number&#x0a;• At least 1 special character"
+                       Foreground="Gray"
+                       Margin="0,0,0,20"
+                       TextWrapping="Wrap"/>
+
+            <!-- Register Button -->
+            <Button x:Name="btnRegister"
+                    Content="Register"
+                    Background="Black"
+                    Foreground="#00FF00"
+                    FontWeight="Bold"
+                    BorderThickness="1"
+                    BorderBrush="#00FF00"
+                    Padding="15,5"
+                    Cursor="Hand"
+                    Click="BtnRegister_Click"/>
+
+            <!-- Error Message -->
+            <TextBlock x:Name="txtErrorMessage"
+                       Foreground="Red"
+                       Margin="0,10,0,0"
+                       Visibility="Collapsed"
+                       TextWrapping="Wrap"/>
+        </StackPanel>
+    </Grid>
+</Window>
