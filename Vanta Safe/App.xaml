@@ -32,23 +32,27 @@
             </Setter>
         </Style>
 
-        <!-- Corrected HintPasswordBox Style -->
         <Style x:Key="HintPasswordBox" TargetType="PasswordBox">
             <Setter Property="Background" Value="#1A1A1A"/>
-            <Setter Property="BorderBrush" Value="Black"/>
             <Setter Property="Foreground" Value="#00FF00"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="5"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="PasswordBox">
                         <Grid>
-                            <Border Background="{TemplateBinding Background}" 
-                            BorderBrush="{TemplateBinding BorderBrush}"/>
-                            <ScrollViewer x:Name="PART_ContentHost"/>
-                            <TextBlock x:Name="HintText" 
+                            <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="2"/>
+                            <ScrollViewer x:Name="PART_ContentHost"
+                                  Margin="{TemplateBinding Padding}"/>
+                            <TextBlock x:Name="HintText"
                                Text="{TemplateBinding Tag}"
                                Foreground="Gray"
-                               Visibility="Visible"
-                               Margin="5,2,0,0"
+                               Visibility="Collapsed"
+                               Margin="8,0,0,0"
                                IsHitTestVisible="False"/>
                         </Grid>
                         <ControlTemplate.Triggers>
@@ -58,6 +62,43 @@
                             <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Password.Length}" Value="0">
                                 <Setter TargetName="HintText" Property="Visibility" Value="Visible"/>
                             </DataTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        
+        <Style TargetType="CheckBox" BasedOn="{StaticResource {x:Type CheckBox}}">
+            <Setter Property="Foreground" Value="#CCCCCC"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderBrush" Value="#00FF00"/>
+            <Setter Property="Margin" Value="5,2"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="CheckBox">
+                        <StackPanel Orientation="Horizontal">
+                            <Border x:Name="CheckBoxBorder" 
+                            Width="16" 
+                            Height="16" 
+                            BorderBrush="{TemplateBinding BorderBrush}" 
+                            BorderThickness="1"
+                            Background="#1A1A1A">
+                                <TextBlock x:Name="CheckMark" 
+                                   Text="✓" 
+                                   Foreground="#00FF00"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   Visibility="Collapsed"/>
+                            </Border>
+                            <ContentPresenter Margin="5,0,0,0"
+                                      VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsChecked" Value="True">
+                                <Setter Property="Foreground" Value="#00FF00"/>
+                                <Setter TargetName="CheckMark" Property="Visibility" Value="Visible"/>
+                                <Setter TargetName="CheckBoxBorder" Property="BorderBrush" Value="#00FF00"/>
+                            </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
                 </Setter.Value>

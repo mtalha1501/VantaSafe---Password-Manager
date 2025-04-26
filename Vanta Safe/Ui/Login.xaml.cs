@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Vanta_Safe.Services;
 
 namespace Vanta_Safe.Ui
 {
@@ -26,7 +27,27 @@ namespace Vanta_Safe.Ui
 
         private void BtnLogin_Click(object sender, RoutedEventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txtUsername.Text))
+            {
+                txtError.Text = "Username is required!";
+                txtError.Visibility = Visibility.Visible;
+                return;
+            }
 
+            if (AuthService.VerifyUser(txtUsername.Text, txtPassword.Password, out var deviceSecret))
+            {
+                var masterKey = AuthService.DeriveMasterKey(txtPassword.Password, deviceSecret);
+                App.Current.Properties["MasterKey"] = masterKey;
+                App.Current.Properties["CurrentUser"] = txtUsername.Text;
+
+                new VaultWindow().Show();
+                this.Close();
+            }
+            else
+            {
+                txtError.Text = "Invalid username or password!";
+                txtError.Visibility = Visibility.Visible;
+            }
         }
 
         private void BtnBack_Click(object sender, RoutedEventArgs e)

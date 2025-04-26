@@ -13,6 +13,9 @@
     <Compile Update="Ui\RegisterWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Ui\VaultWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Ui\MainWindow.xaml">
@@ -22,6 +25,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Ui\RegisterWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Ui\VaultWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

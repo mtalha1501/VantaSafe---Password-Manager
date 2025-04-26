@@ -1,8 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "LqfUkAQFwzs4SncxrAYLO5MeY1BUZMBd50qHPgcfcB9F2aTWByuu8RGotaSOKJ9dxtmnk3pkKxuzwnrMsEk5pw==",
+  "dgSpecHash": "ZzoIOg8LB6Mqyu/k9hmDT8SnOfsnLBwCgpMHc24q2Xkxog1hAkFBUNzFhxuYBzAOx24e0JvExruMk92tADos2A==",
   "success": true,
   "projectFilePath": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Vanta Safe.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Talha\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
+    "C:\\Users\\Talha\\.nuget\\packages\\microsoft.data.sqlite\\9.0.4\\microsoft.data.sqlite.9.0.4.nupkg.sha512",
+    "C:\\Users\\Talha\\.nuget\\packages\\microsoft.data.sqlite.core\\9.0.4\\microsoft.data.sqlite.core.9.0.4.nupkg.sha512",
+    "C:\\Users\\Talha\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.1.10\\sqlitepclraw.bundle_e_sqlite3.2.1.10.nupkg.sha512",
+    "C:\\Users\\Talha\\.nuget\\packages\\sqlitepclraw.core\\2.1.10\\sqlitepclraw.core.2.1.10.nupkg.sha512",
+    "C:\\Users\\Talha\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.1.10\\sqlitepclraw.lib.e_sqlite3.2.1.10.nupkg.sha512",
+    "C:\\Users\\Talha\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.1.10\\sqlitepclraw.provider.e_sqlite3.2.1.10.nupkg.sha512",
+    "C:\\Users\\Talha\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512"
+  ],
   "logs": []
 }
