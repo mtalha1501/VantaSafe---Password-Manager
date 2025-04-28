@@ -1,0 +1,79 @@
+﻿<Window x:Class="Vanta_Safe.Ui.PassCRUD"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Password Details" 
+        ResizeMode="NoResize"
+        Height="450" Width="600">
+
+    <Window.Background>
+        <ImageBrush ImageSource="G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\Assets\venta-black.jpg" Stretch="UniformToFill"/>
+    </Window.Background>
+
+    <Grid>
+        <!-- Header -->
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,30">
+            <TextBlock Text="Password Details"
+               Foreground="#00FF00"
+               FontSize="24"
+               FontWeight="Bold"/>
+
+            <TextBlock x:Name="lblSiteName" 
+               Text="{Binding SiteName}"
+               Foreground="#00FF00"
+               FontSize="18"
+               HorizontalAlignment="Center"/>
+        </StackPanel> 
+
+        <!-- Details Panel -->
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <!-- Site Name -->
+            <StackPanel Orientation="Horizontal" Margin="0,10">
+                <TextBlock Text="Site: " Width="100" Foreground="#00FF00"/>
+                <TextBlock x:Name="txtSite" Text="{Binding SiteName}" Foreground="White"/>
+            </StackPanel>
+
+            <!-- URL -->
+            <StackPanel Orientation="Horizontal" Margin="0,10">
+                <TextBlock Text="URL: " Width="100" Foreground="#00FF00"/>
+                <TextBlock x:Name="txtUrl" Text="{Binding SiteUrl}" Foreground="White"/>
+            </StackPanel>
+
+            <!-- Action Buttons -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20">
+                <Button x:Name="btnCopyPass" 
+                        Content="Copy Password"
+                        Click="CopyPass_Click"
+                        Style="{StaticResource ActionButtonStyle}"
+                        Margin="0,0,10,0"/>
+
+                <Button x:Name="btnCopyAll" 
+                        Content="Copy All Details"
+                        Click="btnCopyAll_clcik"
+                        Style="{StaticResource ActionButtonStyle}"/>
+            </StackPanel>
+
+            <!-- Management Buttons -->
+            <StackPanel HorizontalAlignment="Center" Margin="0,30">
+                <Button x:Name="btnEdit" 
+                        Content="Edit Secret"
+                        Style="{StaticResource ActionButtonStyle}"
+                        Margin="0,0,0,10"
+                        Click="btnEdit_Click"/>
+
+                <Button x:Name="btnDelete" 
+                        Content="Delete Secret"
+                        Click="btnDelete_Click"
+                        Style="{StaticResource DangerButtonStyle}"/>
+            </StackPanel>
+        </StackPanel>
+
+        <!-- Back Button -->
+        <Button x:Name="btnBack" 
+                Content="← Back" 
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="20,20"
+                Style="{StaticResource MenuButtonStyle}"
+                Click="GoBack_Click"/>
+    </Grid>
+</Window>

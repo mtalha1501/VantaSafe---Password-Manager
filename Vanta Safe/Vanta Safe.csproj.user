@@ -7,7 +7,25 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Ui\AddCredentialWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Ui\EditCredential.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Ui\HelpWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Ui\Login.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Ui\PassCRUD.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Ui\PasswordPromptWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Ui\PasswordsWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Ui\RegisterWindow.xaml.cs">
@@ -18,10 +36,28 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Ui\AddCredentialWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Ui\EditCredential.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Ui\HelpWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Ui\MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Ui\Login.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Ui\PassCRUD.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Ui\PasswordPromptWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Ui\PasswordsWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Ui\RegisterWindow.xaml">

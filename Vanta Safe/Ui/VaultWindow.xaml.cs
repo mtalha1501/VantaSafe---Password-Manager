@@ -23,5 +23,26 @@ namespace Vanta_Safe.Ui
         {
             InitializeComponent();
         }
+
+        private void BtnLogout_Click(object sender, RoutedEventArgs e)
+        {
+            Window main = new MainWindow();
+            main.Show();
+            this.Close();
+        }
+
+        private void BtnPasswords_Click(object sender, RoutedEventArgs e)
+        {
+            Window pass = new PasswordsWindow();
+            pass.Show();
+            this.Close();
+        }
+
+        private void Help_Click(object sender, RoutedEventArgs e)
+        {
+            var p = new HelpWindow();
+            p.Show();
+            this.Close();
+        }
     }
 }

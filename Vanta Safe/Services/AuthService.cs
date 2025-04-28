@@ -14,41 +14,52 @@ namespace Vanta_Safe.Services
     // In AuthService.cs
     public static class AuthService
     {
-        // Password hashing configuration
         private const int HashWorkFactor = 12;
-        private const HashType HashAlgorithm = HashType.SHA384;
+        private const int Pbkdf2Iterations = 100_000;  // For AES key derivation
+        private const int AesKeySize = 256;            // AES-256
 
-        /// <summary>
-        /// Registers a new user with master password
-        /// </summary>
+
         public static bool RegisterUser(string username, string masterPassword, out string deviceSecret)
         {
             deviceSecret = GenerateDeviceSecret();
+            string hashedMaster = BCrypt.Net.BCrypt.EnhancedHashPassword(
+                masterPassword + deviceSecret,
+                BCrypt.Net.HashType.SHA384,
+                HashWorkFactor);
 
             try
             {
-                string hashedMaster = EnhancedHashPassword(masterPassword, deviceSecret);
-
                 using (var connection = new SqliteConnection(DatabaseService.ConnectionString))
                 {
                     connection.Open();
-                    var command = connection.CreateCommand();
-                    command.CommandText = @"
-                    INSERT INTO Users (Username, MasterKeyHash, DeviceSecret) 
-                    VALUES (@username, @hash, @secret)";
+                    var cmd = connection.CreateCommand();
+                    cmd.CommandText = @"
+                        INSERT INTO Users (Username, MasterKeyHash, DeviceSecret) 
+                        VALUES (@username, @hash, @secret)";
 
-                    command.Parameters.AddWithValue("@username", username);
-                    command.Parameters.AddWithValue("@hash", hashedMaster);
-                    command.Parameters.AddWithValue("@secret", deviceSecret);
+                    cmd.Parameters.AddWithValue("@username", username);
+                    cmd.Parameters.AddWithValue("@hash", hashedMaster);
+                    cmd.Parameters.AddWithValue("@secret", deviceSecret);
 
-                    return command.ExecuteNonQuery() == 1;
+                    return cmd.ExecuteNonQuery() == 1;
                 }
             }
             catch (SqliteException ex) when (ex.SqliteErrorCode == 19)
             {
                 deviceSecret = null;
-                return false;
+                return false; // Username exists
             }
+        }
+        public static byte[] DeriveMasterKey(string masterPassword, string deviceSecret) // AES Key hai ye
+        {
+            byte[] salt = Encoding.UTF8.GetBytes(deviceSecret); // DeviceSecret as salt
+            using var pbkdf2 = new Rfc2898DeriveBytes(
+                password: masterPassword + deviceSecret,
+                salt: salt,
+                iterations: Pbkdf2Iterations,
+                hashAlgorithm: HashAlgorithmName.SHA384
+            );
+            return pbkdf2.GetBytes(AesKeySize / 8); // 32 bytes for AES-256
         }
 
         public static bool VerifyUser(string username, string masterPassword, out string deviceSecret)
@@ -58,116 +69,79 @@ namespace Vanta_Safe.Services
             using (var connection = new SqliteConnection(DatabaseService.ConnectionString))
             {
                 connection.Open();
-                var command = connection.CreateCommand();
-                command.CommandText = @"
-                SELECT MasterKeyHash, DeviceSecret 
-                FROM Users 
-                WHERE Username = @username";
+                var cmd = connection.CreateCommand();
+                cmd.CommandText = "SELECT MasterKeyHash, DeviceSecret FROM Users WHERE Username = @username";
+                cmd.Parameters.AddWithValue("@username", username);
 
-                command.Parameters.AddWithValue("@username", username);
-
-                using (var reader = command.ExecuteReader())
+                using (var reader = cmd.ExecuteReader())
                 {
                     if (reader.Read())
                     {
                         string storedHash = reader.GetString(0);
                         deviceSecret = reader.GetString(1);
-                        return EnhancedVerify(masterPassword, storedHash, deviceSecret);
+                        return BCrypt.Net.BCrypt.EnhancedVerify(
+                            masterPassword + deviceSecret,
+                            storedHash,
+                            BCrypt.Net.HashType.SHA384);
                     }
                 }
             }
             return false;
         }
 
-        /// <summary>
-        /// Verifies master password and returns device secret if valid
-        /// </summary>
-        public static bool VerifyMasterPassword(string masterPassword, out string deviceSecret)
+        // Add these methods to AuthService.cs
+        private static string HashMasterPassword(string password, string secret)
+            => BCrypt.Net.BCrypt.EnhancedHashPassword(password + secret, BCrypt.Net.HashType.SHA384);
+
+        public static bool VerifyMasterPassword(string password, string username, out string deviceSecret)
         {
             deviceSecret = null;
 
             using (var connection = new SqliteConnection(DatabaseService.ConnectionString))
             {
                 connection.Open();
-                var command = connection.CreateCommand();
-                command.CommandText = "SELECT MasterKeyHash, DeviceSecret FROM Secrets LIMIT 1";
+                var cmd = connection.CreateCommand();
+                cmd.CommandText = "SELECT MasterKeyHash, DeviceSecret FROM Users WHERE Username = @username";
+                cmd.Parameters.AddWithValue("@username", username);
 
-                using (var reader = command.ExecuteReader())
+                using (var reader = cmd.ExecuteReader())
                 {
                     if (reader.Read())
                     {
                         string storedHash = reader.GetString(0);
                         deviceSecret = reader.GetString(1);
-
-                        return EnhancedVerify(masterPassword, storedHash, deviceSecret);
-                        // In VerifyMasterPassword(), add debug output:
-                        MessageBox.Show($"Stored Hash: {storedHash} \n \"Device Secret: {deviceSecret}\"");
+                        return BCrypt.Net.BCrypt.EnhancedVerify(
+                            password + deviceSecret,
+                            storedHash,
+                            BCrypt.Net.HashType.SHA384);
                     }
                 }
             }
             return false;
         }
 
-        /// <summary>
-        /// Generates cryptographic key from master password + device secret
-        /// </summary>
-        public static byte[] DeriveMasterKey(string masterPassword, string deviceSecret)
-        {
-            using var pbkdf2 = new Rfc2898DeriveBytes(
-                Encoding.UTF8.GetBytes(masterPassword),
-                Encoding.UTF8.GetBytes(deviceSecret),
-                100000,
-                HashAlgorithmName.SHA384);
-
-            return pbkdf2.GetBytes(32); // 256-bit key for AES
-        }
-
         private static string GenerateDeviceSecret()
         {
-            const string validChars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789"; // No confusing characters
+            const string chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
             var rng = RandomNumberGenerator.Create();
-            var bytes = new byte[16];
+            byte[] bytes = new byte[10];
             rng.GetBytes(bytes);
 
-            var sb = new StringBuilder();
-            foreach (byte b in bytes)
+            return new string(bytes.Select(b => chars[b % chars.Length]).ToArray());
+        }
+        // In AuthService.cs
+        public static byte[] GenerateHash(string plaintext, byte[] masterKey)
+        {
+            using (var hmac = new HMACSHA256(masterKey)) // Keyed hash
             {
-                sb.Append(validChars[b % validChars.Length]);
+                byte[] plaintextBytes = Encoding.UTF8.GetBytes(plaintext);
+                byte[] hash = hmac.ComputeHash(plaintextBytes);
+
+                // Securely wipe plaintext bytes
+                Array.Clear(plaintextBytes, 0, plaintextBytes.Length);
+                return hash;
             }
-            return sb.ToString();
         }
-
-        // Enhanced BCrypt hashing with combined secret
-        private static string EnhancedHashPassword(string password, string secret)
-        {
-            // Step 1: Combine password + secret
-            string combined = password + secret;
-
-            // Step 2: Hash the combination with SHA384
-            using var sha384 = SHA384.Create();
-            byte[] combinedBytes = Encoding.UTF8.GetBytes(combined);
-            byte[] shaHash = sha384.ComputeHash(combinedBytes);
-            string base64Hash = Convert.ToBase64String(shaHash);
-
-            // Step 3: Now hash the SHA384 result with BCrypt
-            return BCrypt.Net.BCrypt.HashPassword(base64Hash, HashWorkFactor);
-        }
-
-        private static bool EnhancedVerify(string password, string hash, string secret)
-        {
-            // Step 1: Combine password + secret
-            string combined = password + secret;
-
-            // Step 2: Hash the combination with SHA384
-            using var sha384 = SHA384.Create();
-            byte[] combinedBytes = Encoding.UTF8.GetBytes(combined);
-            byte[] shaHash = sha384.ComputeHash(combinedBytes);
-            string base64Hash = Convert.ToBase64String(shaHash);
-
-            // Step 3: Verify the BCrypt hash
-            return BCrypt.Net.BCrypt.Verify(base64Hash, hash);
-        }
-
     }
 
 

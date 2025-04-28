@@ -10,13 +10,18 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Assets\" />
-    <Folder Include="DB\" />
+    <Compile Remove="DB\**" />
+    <EmbeddedResource Remove="DB\**" />
+    <None Remove="DB\**" />
+    <Page Remove="DB\**" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
-    <PackageReference Include="Microsoft.Data.Sqlite" Version="9.0.4" />
+    <PackageReference Include="Microsoft.AspNetCore.DataProtection" Version="9.0.4" />
+    <PackageReference Include="Microsoft.AspNetCore.DataProtection.Extensions" Version="9.0.4" />
+    <PackageReference Include="Microsoft.Data.Sqlite.Core" Version="5.0.17" />
+    <PackageReference Include="SQLitePCLRaw.bundle_green" Version="2.0.5" />
   </ItemGroup>
 
 </Project>

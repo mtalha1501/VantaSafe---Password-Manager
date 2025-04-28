@@ -1,0 +1,168 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
+using System.Security.Cryptography;
+using Microsoft.Data.Sqlite;
+using System.IO;
+using Vanta_Safe.Services;
+using Vanta_Safe.Ui;
+
+namespace Vanta_Safe
+{
+    /// <summary>
+    /// Interaction logic for AddCredentialWindow.xaml
+    /// </summary>
+    public partial class AddCredentialWindow : Window
+    {
+        public AddCredentialWindow()
+        {
+            InitializeComponent();
+        }
+
+        private void btnSave_Click(object sender, RoutedEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtSiteName.Text) ||
+                string.IsNullOrWhiteSpace(txtUsername.Text) ||
+                string.IsNullOrWhiteSpace(txtPassword.Password))
+            {
+                MessageBox.Show("Site Name, Username, and Password are required!", "Error",
+                                MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+            try
+            {
+                // Get the current user's MasterKey (stored during login)
+                byte[] masterKey = (byte[])Application.Current.Properties["MasterKey"];
+                string currentUser = (string)Application.Current.Properties["CurrentUser"];
+
+                // Encryption
+                if(masterKey == null)
+                {
+                    MessageBox.Show("ms key is null");
+                }
+
+                byte[] encryptedSiteName = EncryptDecryptService.EncryptField(txtSiteName.Text, masterKey);
+                byte[] encryptedUsername = EncryptDecryptService.EncryptField(txtUsername.Text, masterKey);
+                byte[] encryptedPassword = EncryptDecryptService.EncryptField(txtPassword.Password, masterKey);
+                byte[] encryptedUrl = !string.IsNullOrEmpty(txtSiteUrl.Text) ? EncryptDecryptService.EncryptField(txtSiteUrl.Text, masterKey): null;
+
+                
+                //Save to database (Step 4)
+                if(!SaveCredentialToDb(encryptedSiteName, encryptedUsername,
+                   encryptedPassword, encryptedUrl, currentUser))
+                {
+                    MessageBox.Show($"Failed to save credential: Already Exists ");
+                }
+                else
+                {
+                    MessageBox.Show("Credential saved successfully!", "Success",
+                               MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Failed to save credential: {ex.Message}", "Error",
+                                MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+
+        
+        private bool SaveCredentialToDb(byte[] encryptedSiteName, byte[] encryptedUsername,
+                               byte[] encryptedPassword, byte[] encryptedUrl,
+                               string currentUser)
+        {
+            using (var connection = new SqliteConnection(DatabaseService.ConnectionString))
+            {
+                connection.Open();
+
+                // Check duplicates via decryption
+                if (CredentialExists(connection, currentUser,
+                    (byte[])Application.Current.Properties["MasterKey"],
+                    txtUsername.Text, txtSiteUrl.Text))
+                {
+                    MessageBox.Show("This credential already exists!", "Duplicate",
+                                   MessageBoxButton.OK, MessageBoxImage.Warning);
+                    return false;
+                }
+
+                byte[] masterKey = (byte[]) Application.Current.Properties["MasterKey"];
+                byte[] usernameHash = AuthService.GenerateHash(txtUsername.Text, masterKey);
+                byte[] urlHash = AuthService.GenerateHash(txtSiteUrl.Text, masterKey);
+
+                var cmd = connection.CreateCommand();
+
+                cmd.CommandText = @"
+            INSERT INTO Credentials 
+            (UserId, EncryptedSiteName, EncryptedSiteUrl, EncryptedUsername, EncryptedPassword,UsernameHash,SiteUrlHash)
+            VALUES (
+                (SELECT Id FROM Users WHERE Username = @currentUser),
+                @encryptedSiteName, 
+                @encryptedSiteUrl, 
+                @encryptedUsername, 
+                @encryptedPassword,
+                @UsernameHash,
+                @SiteUrlHash
+            )";
+
+                cmd.Parameters.AddWithValue("@currentUser", currentUser);
+                cmd.Parameters.AddWithValue("@encryptedSiteName", encryptedSiteName);
+                cmd.Parameters.AddWithValue("@encryptedSiteUrl", encryptedUrl ?? (object)DBNull.Value);
+                cmd.Parameters.AddWithValue("@encryptedUsername", encryptedUsername);
+                cmd.Parameters.AddWithValue("@encryptedPassword", encryptedPassword);
+                cmd.Parameters.AddWithValue("@UsernameHash", usernameHash);
+                cmd.Parameters.AddWithValue("@SiteUrlHash", urlHash);
+
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+        }
+
+        private void GoBack_Click(object sender, RoutedEventArgs e)
+        {
+            Window pass = new PasswordsWindow();
+            pass.Show();
+            this.Close();
+        }
+
+        private bool CredentialExists(SqliteConnection connection, string currentUser,
+                            byte[] masterKey, string username, string url)
+        {
+
+            byte[] usernameHash = AuthService.GenerateHash(username, masterKey);
+            byte[] urlHash = AuthService.GenerateHash(url, masterKey);
+
+            var cmd = connection.CreateCommand();
+            cmd.CommandText = @"
+        SELECT 1 FROM Credentials 
+        WHERE UserId = (SELECT Id FROM Users WHERE Username = @currentUser)
+        AND UsernameHash = @usernameHash
+        AND SiteUrlHash = @urlHash
+        LIMIT 1";
+
+            cmd.Parameters.AddWithValue("@currentUser", currentUser);
+            cmd.Parameters.AddWithValue("@usernameHash", usernameHash);
+            cmd.Parameters.AddWithValue("@urlHash", urlHash);
+
+            cmd.ExecuteNonQuery();
+
+            return cmd.ExecuteScalar() != null;
+
+
+           
+        }
+    }
+}

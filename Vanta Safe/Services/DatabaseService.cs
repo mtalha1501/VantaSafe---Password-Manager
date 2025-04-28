@@ -1,56 +1,87 @@
 ﻿using System;
-using System.Collections.Generic;
-using Microsoft.Data.Sqlite;
 using System.IO;
-using System.Linq;
+using System.Reflection;
+using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
+using System.Windows;
+using Microsoft.Data.Sqlite;
+using Vanta_Safe.Models;
+
+
 
 namespace Vanta_Safe.Services
 {
     public static class DatabaseService
     {
-        // Permanent path in your project's DB folder
-        private static readonly string _dbPath = Path.Combine(
-            Directory.GetParent(Directory.GetCurrentDirectory())!.Parent!.Parent!.FullName,
-            "DB",
-            "Vault.db");
+        private static string _dbPath = Path.Combine("DB", "Vault.db");
+        private static byte[] _dbKey; // DPAPI-managed key
 
-        public static string ConnectionString => $"Data Source={_dbPath}";
+        public static string ConnectionString => $"Data Source={_dbPath};";
+
+        private static byte[] GenerateAndSaveKey()
+        {
+            var key = new byte[32];
+            RandomNumberGenerator.Fill(key);
+            DPAPIService.SaveEncryptedKey(key);
+            return key;
+        }
 
         public static void Initialize()
         {
-            // Create DB folder if missing
-            Directory.CreateDirectory(Path.GetDirectoryName(_dbPath)!);
-
-            // Create database file if missing
-            if (!File.Exists(_dbPath))
+            try
             {
-                File.Create(_dbPath).Close(); // Creates empty file
+                // 1. Initialize SQLCipher
+                Directory.CreateDirectory("DB");
 
-                using var connection = new SqliteConnection(ConnectionString);
-                connection.Open();
+                if (!File.Exists(DPAPIService.KeyPath))
+                {
+                    _dbKey = new byte[32];
+                    RandomNumberGenerator.Fill(_dbKey);
+                    DPAPIService.SaveEncryptedKey(_dbKey);
+                }
+                else
+                {
+                    _dbKey = DPAPIService.LoadDecryptedKey();
+                }
 
-                // Create tables
-                var cmd = connection.CreateCommand();
-                cmd.CommandText = @"
+                // DB initialization
+                using (var conn = new SqliteConnection($"Data Source={_dbPath}"))
+                {
+                    conn.Open();
+                    var cmd = conn.CreateCommand();
+                    cmd.CommandText = $"PRAGMA key = '{Convert.ToHexString(_dbKey)}';";
+                    cmd.ExecuteNonQuery();
+
+                    cmd.CommandText = @"
+    PRAGMA foreign_keys = ON;
     CREATE TABLE IF NOT EXISTS Users (
         Id INTEGER PRIMARY KEY AUTOINCREMENT,
         Username TEXT NOT NULL UNIQUE,
         MasterKeyHash TEXT NOT NULL,
-        DeviceSecret TEXT NOT NULL
+        DeviceSecret TEXT NOT NULL,
+        FailedAttempts INTEGER DEFAULT 0
     );
-    
-    CREATE TABLE IF NOT EXISTS Entries (
+    CREATE TABLE IF NOT EXISTS Credentials (
         Id INTEGER PRIMARY KEY AUTOINCREMENT,
         UserId INTEGER NOT NULL,
-        SiteName TEXT NOT NULL,
-        EncryptedPassword TEXT NOT NULL,
+        EncryptedSiteName BLOB NOT NULL,
+        EncryptedSiteUrl BLOB NOT NULL,
+        EncryptedUsername BLOB NOT NULL,
+        EncryptedPassword BLOB NOT NULL,
+        UsernameHash BLOB NOT NULL DEFAULT X'00',
+        SiteUrlHash BLOB NOT NULL DEFAULT X'00',
         FOREIGN KEY(UserId) REFERENCES Users(Id) ON DELETE CASCADE
-    )";
-                cmd.ExecuteNonQuery();
+    );
+    ";
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Database initialization failed: {ex.Message}");
+                Application.Current.Shutdown();
             }
         }
     }
-
 }

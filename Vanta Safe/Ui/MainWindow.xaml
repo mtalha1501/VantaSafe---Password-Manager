@@ -69,6 +69,7 @@
             Foreground="#00FF00"
             FontWeight="Bold"
             BorderThickness="0"
+                      
             Cursor="Hand" Width="100"
                         Click="LoginClick"/>
             </Border>

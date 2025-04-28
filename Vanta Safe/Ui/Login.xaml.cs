@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Data.Sqlite;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -33,8 +34,39 @@ namespace Vanta_Safe.Ui
                 txtError.Visibility = Visibility.Visible;
                 return;
             }
+            using (var connection = new SqliteConnection(DatabaseService.ConnectionString))
+            {
+                connection.Open();
+                var cmdFetch = connection.CreateCommand();
 
-            if (AuthService.VerifyUser(txtUsername.Text, txtPassword.Password, out var deviceSecret))
+                // Failed Attempt handle
+                cmdFetch.CommandText  = @"SELECT FailedAttempts FROM Users WHERE Username = @username";
+                cmdFetch.Parameters.AddWithValue("@username", txtUsername.Text);
+
+                var result = cmdFetch.ExecuteScalar();
+                if (result == null)
+                {
+                    txtError.Text = "Invalid username or password!";
+                    txtError.Visibility = Visibility.Visible;
+                    return;
+                }
+
+                int failedAttempts = Convert.ToInt32(result);
+
+                // If already locked out
+                if (failedAttempts >= 5)
+                {
+                    txtError.Text = "Account locked due to multiple failed attempts!";
+                    MessageBox.Show("Account has been Locked out for invalid attempts");
+                    txtError.Visibility = Visibility.Visible;
+                    Application.Current.Shutdown();  // Close the app
+                    return;
+                }
+                connection.Close();
+            }
+
+
+            if (AuthService.VerifyMasterPassword(txtPassword.Password, txtUsername.Text, out var deviceSecret))
             {
                 var masterKey = AuthService.DeriveMasterKey(txtPassword.Password, deviceSecret);
                 App.Current.Properties["MasterKey"] = masterKey;
@@ -45,6 +77,18 @@ namespace Vanta_Safe.Ui
             }
             else
             {
+                using (var connection = new SqliteConnection(DatabaseService.ConnectionString))
+                {
+                    connection.Open();
+                    var cmdFetch = connection.CreateCommand();
+                    cmdFetch.CommandText = @"UPDATE Users SET FailedAttempts = FailedAttempts + 1 WHERE Username = @username";
+                    cmdFetch.Parameters.AddWithValue("@username", txtUsername.Text);
+                    cmdFetch.ExecuteNonQuery();
+                    connection.Close();
+                }
+
+                txtError.Text = "Invalid username or password!";
+                txtError.Visibility = Visibility.Visible;
                 txtError.Text = "Invalid username or password!";
                 txtError.Visibility = Visibility.Visible;
             }

@@ -1,12 +1,79 @@
 ﻿<Window x:Class="Vanta_Safe.Ui.VaultWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Vanta_Safe.Ui"
-        mc:Ignorable="d"
-        Title="VaultWindow" Height="450" Width="800">
+        Title="Vault" 
+        WindowState="Maximized"
+        Height="600" Width="800">
+
+    <Window.Background>
+        <ImageBrush ImageSource="G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\Assets\venta-black.jpg" Stretch="UniformToFill"/>
+    </Window.Background>
+
     <Grid>
-        
+        <!-- Header -->
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,40,0,0" Width="221">
+            <TextBlock Text="Vault" 
+                       Foreground="#00FF00" 
+                       FontSize="36"
+                       FontWeight="Bold"
+                       HorizontalAlignment="Center"/>
+
+            <!-- Animated Lock -->
+            <Image x:Name="imgLock" 
+                   Source="G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\Assets\passwords-50.png"
+                   Width="40" 
+                   Height="40"
+                   HorizontalAlignment="Center"
+                   Margin="0,10">
+                <Image.Triggers>
+                    <EventTrigger RoutedEvent="Loaded">
+                        <BeginStoryboard>
+                            <Storyboard RepeatBehavior="Forever" AutoReverse="True">
+                                <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                                                 From="1" To="0.7" Duration="0:0:1.5"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Image.Triggers>
+            </Image>
+        </StackPanel>
+
+        <!-- Menu Buttons -->
+        <StackPanel Orientation="Horizontal" 
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center">
+
+            <!-- Password Catalog -->
+            <Button x:Name="btnPasswords" 
+                    Style="{StaticResource VaultButtonStyle}"
+                    Margin="20,0"
+                    Click="BtnPasswords_Click" Width="200" Height="150">
+                <StackPanel>
+                    <Image Source="G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\Assets\passw-laptop-32.png" Width="110" Height="80"/>
+                    <TextBlock Text="         Passwords" Margin="0,5" Foreground="#00FF00"/>
+                </StackPanel>
+            </Button>
+
+            <!-- Help -->
+            <Button x:Name="btnHelp" 
+                    Style="{StaticResource VaultButtonStyle}"
+                    Width="200" Height="150"
+                    Click="Help_Click"
+                    Margin="20,0">
+                <StackPanel>
+                    <Image Source="G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\Assets\help-80.png" Width="70" Height="80"/>
+                    <TextBlock Text="Need Help?" Margin="0,5" Foreground="#00FF00"/>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+
+        <!-- Logout Button -->
+        <Button x:Name="btnLogout"
+                Content="Logout"
+                Style="{StaticResource MenuButtonStyle}"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Bottom"
+                Margin="0,0,20,20"
+                Click="BtnLogout_Click"/>
     </Grid>
 </Window>
