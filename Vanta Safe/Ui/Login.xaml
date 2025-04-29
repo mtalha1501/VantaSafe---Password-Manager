@@ -40,6 +40,12 @@ Click="BtnBack_Click"/>
         Not Registered? → Register
     </Hyperlink>
             </TextBlock>
+            <TextBlock Margin="110,0,0,20" HorizontalAlignment="Center">
+                     <Hyperlink x:Name="linkRecovery" Click="LinkRecovery_Click"
+           Foreground="#00FF00" TextDecorations="Underline">
+    Account Locked Out? → Recover
+</Hyperlink>
+            </TextBlock>
 
             <TextBlock x:Name="txtError"
                    Foreground="Red"

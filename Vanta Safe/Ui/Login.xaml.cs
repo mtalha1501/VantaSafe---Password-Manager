@@ -105,5 +105,11 @@ namespace Vanta_Safe.Ui
             new RegisterWindow().Show();
             this.Close();
         }
+
+        private void LinkRecovery_Click(object sender, RoutedEventArgs e)
+        {
+            var v = new RecoveryWindow();
+            v.ShowDialog();
+        }
     }
 }

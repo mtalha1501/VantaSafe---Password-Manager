@@ -79,3 +79,5 @@ G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Debug\net8.0-windows\ref
 G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Debug\net8.0-windows\Vanta Safe.pdb
 G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Debug\net8.0-windows\Vanta Safe.genruntimeconfig.cache
 G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Debug\net8.0-windows\ref\Vanta Safe.dll
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Debug\net8.0-windows\Ui\RecoveryWindow.g.cs
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Debug\net8.0-windows\Ui\RecoveryWindow.baml

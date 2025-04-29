@@ -69,7 +69,7 @@ namespace Vanta_Safe.Ui
 
                 Task.Delay(2000).ContinueWith(_ =>
                 {
-                    //btnCopyPass.Content = "Copy Password";
+                    btnCopyPass.Content = "Copy Password";
                 }, TaskScheduler.FromCurrentSynchronizationContext());
 
 
@@ -105,7 +105,7 @@ namespace Vanta_Safe.Ui
 
                 Task.Delay(2000).ContinueWith(_ =>
                 {
-                   // btnCopyAll.Content = "Copy All Details";
+                   btnCopyAll.Content = "Copy All Details";
                 }, TaskScheduler.FromCurrentSynchronizationContext());
 
 

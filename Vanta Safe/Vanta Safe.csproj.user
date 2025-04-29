@@ -28,6 +28,9 @@
     <Compile Update="Ui\PasswordsWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Ui\RecoveryWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Ui\RegisterWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -58,6 +61,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Ui\PasswordsWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Ui\RecoveryWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Ui\RegisterWindow.xaml">
