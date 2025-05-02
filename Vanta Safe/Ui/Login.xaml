@@ -6,10 +6,11 @@
         xmlns:local="clr-namespace:Vanta_Safe.Ui"
         mc:Ignorable="d"
         Title="Login" Height="450" Width="800"
+        KeyDown="Window_KeyDown"
         WindowState="Maximized"
         >
     <Window.Background>
-        <ImageBrush ImageSource="G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\Assets\venta-black.jpg" Stretch="UniformToFill"/>
+        <ImageBrush ImageSource="G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\Assets\beg5.jpg" Stretch="Fill"/>
     </Window.Background>
     <Grid>
         <Grid.RowDefinitions>

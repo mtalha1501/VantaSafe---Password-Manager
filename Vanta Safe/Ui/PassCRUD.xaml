@@ -2,8 +2,8 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Password Details" 
-        ResizeMode="NoResize"
-        Height="450" Width="600">
+        Height="450" Width="600"
+        WindowStartupLocation="CenterScreen">
 
     <Window.Background>
         <ImageBrush ImageSource="G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\Assets\venta-black.jpg" Stretch="UniformToFill"/>

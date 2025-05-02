@@ -9,28 +9,74 @@
             <Setter Property="Background" Value="#1A1A1A"/>
             <Setter Property="Foreground" Value="#00FF00"/>
             <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="BorderThickness" Value="2"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="TextBox">
                         <Grid>
-                            <Border Background="{TemplateBinding Background}" 
-                                BorderBrush="{TemplateBinding BorderBrush}"/>
+                            <Border x:Name="border" 
+                            Background="{TemplateBinding Background}" 
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"/>
                             <ScrollViewer x:Name="PART_ContentHost"/>
                             <TextBlock x:Name="HintText" 
-                                   Text="{TemplateBinding Tag}"
-                                   Foreground="Gray"
-                                   Visibility="Collapsed"
-                                   Margin="5,2,0,0"/>
+                               Text="{TemplateBinding Tag}"
+                               Foreground="Gray"
+                               Visibility="Collapsed"
+                               Margin="5,2,0,0"/>
                         </Grid>
                         <ControlTemplate.Triggers>
                             <Trigger Property="Text" Value="">
                                 <Setter TargetName="HintText" Property="Visibility" Value="Visible"/>
+                            </Trigger>
+                            <Trigger Property="IsKeyboardFocused" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="#00FF00"/>
+                                <Setter TargetName="border" Property="BorderThickness" Value="2"/>
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
         </Style>
+        <Style TargetType="TextBox" BasedOn="{StaticResource {x:Type TextBox}}">
+            <Style.Triggers>
+                <Trigger Property="IsKeyboardFocused" Value="True">
+                    <Setter Property="BorderBrush" Value="#00FF00"/>
+                    <Setter Property="BorderThickness" Value="2"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="MenuButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="#00FF00"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Padding" Value="15,5"/>
+            <Setter Property="BorderBrush" Value="#00FF00"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="White"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="HoverButtonStyle" TargetType="Button" BasedOn="{StaticResource MenuButtonStyle}">
+            <!-- No additional setters needed since we're using the template from MenuButtonStyle -->
+        </Style>
+
 
         <Style x:Key="HintPasswordBox" TargetType="PasswordBox">
             <Setter Property="Background" Value="#1A1A1A"/>
@@ -42,7 +88,8 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="PasswordBox">
                         <Grid>
-                            <Border Background="{TemplateBinding Background}"
+                            <Border x:Name="border" 
+                            Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}"
                             CornerRadius="2"/>
@@ -57,6 +104,8 @@
                         </Grid>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsKeyboardFocused" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="#00FF00"/>
+                                <Setter TargetName="border" Property="BorderThickness" Value="2"/>
                                 <Setter TargetName="HintText" Property="Visibility" Value="Collapsed"/>
                             </Trigger>
                             <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Password.Length}" Value="0">
@@ -67,7 +116,7 @@
                 </Setter.Value>
             </Setter>
         </Style>
-        
+
         <Style TargetType="CheckBox" BasedOn="{StaticResource {x:Type CheckBox}}">
             <Setter Property="Foreground" Value="#CCCCCC"/>
             <Setter Property="Background" Value="Transparent"/>
@@ -108,7 +157,7 @@
         <Style x:Key="VaultButtonStyle" TargetType="Button">
             <Setter Property="Background" Value="Transparent"/>
             <Setter Property="BorderBrush" Value="#00FF00"/>
-            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="BorderThickness" Value="3"/>
             <Setter Property="Width" Value="120"/>
             <Setter Property="Height" Value="100"/>
             <Setter Property="Cursor" Value="Hand"/>
@@ -133,15 +182,7 @@
             </Style.Triggers>
         </Style>
 
-        <!-- Menu Button Style (Reuse from MainWindow) -->
-        <Style x:Key="MenuButtonStyle" TargetType="Button">
-            <Setter Property="Background" Value="Black"/>
-            <Setter Property="Foreground" Value="#00FF00"/>
-            <Setter Property="FontWeight" Value="Bold"/>
-            <Setter Property="BorderThickness" Value="0"/>
-            <Setter Property="Cursor" Value="Hand"/>
-            <Setter Property="Padding" Value="15,5"/>
-        </Style>
+       
         <!-- Action Button Style -->
         <Style x:Key="ActionButtonStyle" TargetType="Button">
             <Setter Property="Background" Value="Transparent"/>

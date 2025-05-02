@@ -66,5 +66,13 @@ namespace Vanta_Safe.Ui
             this.DialogResult = false;
             this.Close();
         }
+
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.Key == Key.Enter)
+            {
+                BtnConfirm_Click(sender, e);
+            }
+        }
     }
 }

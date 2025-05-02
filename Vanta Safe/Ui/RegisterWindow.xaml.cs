@@ -100,5 +100,12 @@ namespace Vanta_Safe.Ui
             reqCapital.Foreground = Regex.IsMatch(password, @"[A-Z]") ? Brushes.LimeGreen : Brushes.Gray;
             reqSpecial.Foreground = Regex.IsMatch(password, @"[\W_]") ? Brushes.LimeGreen : Brushes.Gray;
         }
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                BtnRegister_Click(sender, e);
+            }
+        }
     }
 }

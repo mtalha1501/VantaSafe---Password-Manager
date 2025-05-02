@@ -101,7 +101,7 @@ namespace Vanta_Safe {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Vanta Safe;component/ui/addcredentialwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Vanta Safe;V1.0.0.0;component/ui/addcredentialwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Ui\AddCredentialWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

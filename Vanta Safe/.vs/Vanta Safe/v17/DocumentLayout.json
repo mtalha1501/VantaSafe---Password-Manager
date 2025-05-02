@@ -3,16 +3,64 @@
   "WorkspaceRootPath": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|g:\\my cs\\semester 4\\isl\\is final project\\vanta safe\\ui\\vaultwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|solutionrelative:ui\\vaultwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\ui\\recoverywindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|solutionrelative:ui\\recoverywindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\ui\\vaultwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|solutionrelative:ui\\vaultwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\ui\\addcredentialwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|solutionrelative:ui\\addcredentialwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\ui\\passwordswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|solutionrelative:ui\\passwordswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\ui\\passcrud.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|solutionrelative:ui\\passcrud.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\ui\\passwordpromptwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|solutionrelative:ui\\passwordpromptwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\ui\\vaultwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|solutionrelative:ui\\vaultwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|g:\\my cs\\semester 4\\isl\\is final project\\vanta safe\\ui\\registerwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|solutionrelative:ui\\registerwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\ui\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|solutionrelative:ui\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\ui\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|solutionrelative:ui\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\ui\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|solutionrelative:ui\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\ui\\registerwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|solutionrelative:ui\\registerwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\ui\\login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|solutionrelative:ui\\login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\ui\\passwordpromptwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|solutionrelative:ui\\passwordpromptwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\ui\\vaultwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|solutionrelative:ui\\vaultwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\ui\\passcrud.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,22 +71,6 @@
       "RelativeMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|solutionrelative:ui\\recoverywindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\ui\\login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|solutionrelative:ui\\login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\ui\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|solutionrelative:ui\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\ui\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|solutionrelative:ui\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\ui\\registerwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|solutionrelative:ui\\registerwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\services\\dpapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|solutionrelative:services\\dpapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -47,20 +79,8 @@
       "RelativeMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|solutionrelative:services\\encryptdecryptservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\ui\\recoverywindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|solutionrelative:ui\\recoverywindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\ui\\helpwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|solutionrelative:ui\\helpwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\ui\\registerwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|solutionrelative:ui\\registerwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -79,20 +99,12 @@
       "RelativeMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|solutionrelative:ui\\addcredentialwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\ui\\addcredentialwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|solutionrelative:ui\\addcredentialwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\ui\\editcredential.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|solutionrelative:ui\\editcredential.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|solutionrelative:assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\ui\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|solutionrelative:ui\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\services\\databaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -103,24 +115,12 @@
       "RelativeMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|solutionrelative:ui\\helpwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\ui\\passcrud.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|solutionrelative:ui\\passcrud.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\models\\credential.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|solutionrelative:models\\credential.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\ui\\passwordpromptwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|solutionrelative:ui\\passwordpromptwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|solutionrelative:services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\ui\\passwordpromptwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|solutionrelative:ui\\passwordpromptwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{64E02320-8616-40A5-BFC3-831A73A566B4}|Vanta Safe.csproj|G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -149,7 +149,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 227,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -161,7 +161,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "VaultWindow.xaml",
               "DocumentMoniker": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\VaultWindow.xaml",
               "RelativeDocumentMoniker": "Ui\\VaultWindow.xaml",
@@ -173,89 +173,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PasswordsWindow.xaml",
-              "DocumentMoniker": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\PasswordsWindow.xaml",
-              "RelativeDocumentMoniker": "Ui\\PasswordsWindow.xaml",
-              "ToolTip": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\PasswordsWindow.xaml",
-              "RelativeToolTip": "Ui\\PasswordsWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-26T14:13:18.347Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "RecoveryWindow.xaml.cs",
-              "DocumentMoniker": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\RecoveryWindow.xaml.cs",
-              "RelativeDocumentMoniker": "Ui\\RecoveryWindow.xaml.cs",
-              "ToolTip": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\RecoveryWindow.xaml.cs",
-              "RelativeToolTip": "Ui\\RecoveryWindow.xaml.cs",
-              "ViewState": "AQIAADgAAACAZmZmZmYawEUAAAA5AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T12:04:58.88Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "RegisterWindow.xaml",
-              "DocumentMoniker": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\RegisterWindow.xaml",
-              "RelativeDocumentMoniker": "Ui\\RegisterWindow.xaml",
-              "ToolTip": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\RegisterWindow.xaml",
-              "RelativeToolTip": "Ui\\RegisterWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-25T20:08:22.124Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PassCRUD.xaml.cs",
-              "DocumentMoniker": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\PassCRUD.xaml.cs",
-              "RelativeDocumentMoniker": "Ui\\PassCRUD.xaml.cs",
-              "ToolTip": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\PassCRUD.xaml.cs",
-              "RelativeToolTip": "Ui\\PassCRUD.xaml.cs",
-              "ViewState": "AQIAADMAAAAAmJmZmZkBwEMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T14:40:15.506Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "VaultWindow.xaml.cs",
-              "DocumentMoniker": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\VaultWindow.xaml.cs",
-              "RelativeDocumentMoniker": "Ui\\VaultWindow.xaml.cs",
-              "ToolTip": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\VaultWindow.xaml.cs",
-              "RelativeToolTip": "Ui\\VaultWindow.xaml.cs",
-              "ViewState": "AQIAABcAAAAAAAAAAAAowCwAAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T11:29:19.585Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "DPAPIService.cs",
-              "DocumentMoniker": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Services\\DPAPIService.cs",
-              "RelativeDocumentMoniker": "Services\\DPAPIService.cs",
-              "ToolTip": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Services\\DPAPIService.cs",
-              "RelativeToolTip": "Services\\DPAPIService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T19:20:27.805Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "App.xaml.cs",
-              "DocumentMoniker": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\App.xaml.cs",
-              "RelativeDocumentMoniker": "App.xaml.cs",
-              "ToolTip": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\App.xaml.cs",
-              "RelativeToolTip": "App.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T21:15:37.387Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 5,
               "Title": "App.xaml",
               "DocumentMoniker": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\App.xaml",
               "RelativeDocumentMoniker": "App.xaml",
@@ -267,29 +185,120 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 2,
+              "Title": "PasswordsWindow.xaml",
+              "DocumentMoniker": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\PasswordsWindow.xaml",
+              "RelativeDocumentMoniker": "Ui\\PasswordsWindow.xaml",
+              "ToolTip": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\PasswordsWindow.xaml",
+              "RelativeToolTip": "Ui\\PasswordsWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-26T14:13:18.347Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PassCRUD.xaml",
+              "DocumentMoniker": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\PassCRUD.xaml",
+              "RelativeDocumentMoniker": "Ui\\PassCRUD.xaml",
+              "ToolTip": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\PassCRUD.xaml",
+              "RelativeToolTip": "Ui\\PassCRUD.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-26T14:16:15.962Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "AddCredentialWindow.xaml",
               "DocumentMoniker": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\AddCredentialWindow.xaml",
               "RelativeDocumentMoniker": "Ui\\AddCredentialWindow.xaml",
               "ToolTip": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\AddCredentialWindow.xaml",
               "RelativeToolTip": "Ui\\AddCredentialWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-26T18:58:26.249Z"
+              "WhenOpened": "2025-04-26T18:58:26.249Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 0,
               "Title": "RecoveryWindow.xaml",
               "DocumentMoniker": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\RecoveryWindow.xaml",
               "RelativeDocumentMoniker": "Ui\\RecoveryWindow.xaml",
               "ToolTip": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\RecoveryWindow.xaml",
               "RelativeToolTip": "Ui\\RecoveryWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-28T11:59:09.432Z"
+              "WhenOpened": "2025-04-28T11:59:09.432Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 4,
+              "Title": "PasswordPromptWindow.xaml",
+              "DocumentMoniker": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\PasswordPromptWindow.xaml",
+              "RelativeDocumentMoniker": "Ui\\PasswordPromptWindow.xaml",
+              "ToolTip": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\PasswordPromptWindow.xaml",
+              "RelativeToolTip": "Ui\\PasswordPromptWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-26T14:48:48.655Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RegisterWindow.xaml",
+              "DocumentMoniker": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\RegisterWindow.xaml",
+              "RelativeDocumentMoniker": "Ui\\RegisterWindow.xaml",
+              "ToolTip": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\RegisterWindow.xaml",
+              "RelativeToolTip": "Ui\\RegisterWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-25T20:08:22.124Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "Ui\\MainWindow.xaml",
+              "ToolTip": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\MainWindow.xaml",
+              "RelativeToolTip": "Ui\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-25T19:08:49.833Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Ui\\MainWindow.xaml.cs",
+              "ToolTip": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\MainWindow.xaml.cs",
+              "RelativeToolTip": "Ui\\MainWindow.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACcAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-25T19:08:43.795Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "PassCRUD.xaml.cs",
+              "DocumentMoniker": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\PassCRUD.xaml.cs",
+              "RelativeDocumentMoniker": "Ui\\PassCRUD.xaml.cs",
+              "ToolTip": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\PassCRUD.xaml.cs",
+              "RelativeToolTip": "Ui\\PassCRUD.xaml.cs",
+              "ViewState": "AQIAADMAAAAAmJmZmZkBwEMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T14:40:15.506Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
               "Title": "HelpWindow.xaml",
               "DocumentMoniker": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\HelpWindow.xaml",
               "RelativeDocumentMoniker": "Ui\\HelpWindow.xaml",
@@ -299,117 +308,32 @@
               "WhenOpened": "2025-04-27T18:50:31.861Z"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Login.xaml.cs",
-              "DocumentMoniker": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\Login.xaml.cs",
-              "RelativeDocumentMoniker": "Ui\\Login.xaml.cs",
-              "ToolTip": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\Login.xaml.cs",
-              "RelativeToolTip": "Ui\\Login.xaml.cs",
-              "ViewState": "AQIAAFcAAACAZmZmZmYOwG8AAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T20:17:06.254Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Login.xaml",
-              "DocumentMoniker": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\Login.xaml",
-              "RelativeDocumentMoniker": "Ui\\Login.xaml",
-              "ToolTip": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\Login.xaml",
-              "RelativeToolTip": "Ui\\Login.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-25T19:48:12.873Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "Ui\\MainWindow.xaml",
-              "ToolTip": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\MainWindow.xaml",
-              "RelativeToolTip": "Ui\\MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-25T19:08:49.833Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "RegisterWindow.xaml.cs",
-              "DocumentMoniker": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\RegisterWindow.xaml.cs",
-              "RelativeDocumentMoniker": "Ui\\RegisterWindow.xaml.cs",
-              "ToolTip": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\RegisterWindow.xaml.cs",
-              "RelativeToolTip": "Ui\\RegisterWindow.xaml.cs",
-              "ViewState": "AQIAAAkAAACAZWZmZmYkwCcAAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T20:16:35.15Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "EncryptDecryptService.cs",
-              "DocumentMoniker": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Services\\EncryptDecryptService.cs",
-              "RelativeDocumentMoniker": "Services\\EncryptDecryptService.cs",
-              "ToolTip": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Services\\EncryptDecryptService.cs",
-              "RelativeToolTip": "Services\\EncryptDecryptService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAA8AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T12:28:42.65Z"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 17,
-              "Title": "EditCredential.xaml.cs",
-              "DocumentMoniker": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\EditCredential.xaml.cs",
-              "RelativeDocumentMoniker": "Ui\\EditCredential.xaml.cs",
-              "ToolTip": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\EditCredential.xaml.cs",
-              "RelativeToolTip": "Ui\\EditCredential.xaml.cs",
-              "ViewState": "AQIAAFYAAABAm5mZmZkZwG4AAABOAAAA",
+              "Title": "DPAPIService.cs",
+              "DocumentMoniker": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Services\\DPAPIService.cs",
+              "RelativeDocumentMoniker": "Services\\DPAPIService.cs",
+              "ToolTip": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Services\\DPAPIService.cs",
+              "RelativeToolTip": "Services\\DPAPIService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T18:59:37.233Z"
+              "WhenOpened": "2025-04-26T19:20:27.805Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "AddCredentialWindow.xaml.cs",
-              "DocumentMoniker": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\AddCredentialWindow.xaml.cs",
-              "RelativeDocumentMoniker": "Ui\\AddCredentialWindow.xaml.cs",
-              "ToolTip": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\AddCredentialWindow.xaml.cs",
-              "RelativeToolTip": "Ui\\AddCredentialWindow.xaml.cs",
-              "ViewState": "AQIAAIYAAAAAZmZmZmYqwKUAAAAJAAAA",
+              "DocumentIndex": 20,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\App.xaml.cs",
+              "RelativeDocumentMoniker": "App.xaml.cs",
+              "ToolTip": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\App.xaml.cs",
+              "RelativeToolTip": "App.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T19:02:46.311Z"
+              "WhenOpened": "2025-04-25T21:15:37.387Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "PasswordPromptWindow.xaml.cs",
-              "DocumentMoniker": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\PasswordPromptWindow.xaml.cs",
-              "RelativeDocumentMoniker": "Ui\\PasswordPromptWindow.xaml.cs",
-              "ToolTip": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\PasswordPromptWindow.xaml.cs",
-              "RelativeToolTip": "Ui\\PasswordPromptWindow.xaml.cs",
-              "ViewState": "AQIAABwAAABAZmZmZmYqwCoAAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T14:49:23.891Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "PasswordPromptWindow.xaml",
-              "DocumentMoniker": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\PasswordPromptWindow.xaml",
-              "RelativeDocumentMoniker": "Ui\\PasswordPromptWindow.xaml",
-              "ToolTip": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\PasswordPromptWindow.xaml",
-              "RelativeToolTip": "Ui\\PasswordPromptWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-26T14:48:48.655Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 21,
               "Title": "PasswordsWindow.xaml.cs",
               "DocumentMoniker": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\PasswordsWindow.xaml.cs",
               "RelativeDocumentMoniker": "Ui\\PasswordsWindow.xaml.cs",
@@ -421,30 +345,117 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "PassCRUD.xaml",
-              "DocumentMoniker": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\PassCRUD.xaml",
-              "RelativeDocumentMoniker": "Ui\\PassCRUD.xaml",
-              "ToolTip": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\PassCRUD.xaml",
-              "RelativeToolTip": "Ui\\PassCRUD.xaml",
+              "DocumentIndex": 23,
+              "Title": "AddCredentialWindow.xaml.cs",
+              "DocumentMoniker": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\AddCredentialWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Ui\\AddCredentialWindow.xaml.cs",
+              "ToolTip": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\AddCredentialWindow.xaml.cs",
+              "RelativeToolTip": "Ui\\AddCredentialWindow.xaml.cs",
+              "ViewState": "AQIAAIYAAAAAZmZmZmYqwKUAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T19:02:46.311Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "VaultWindow.xaml.cs",
+              "DocumentMoniker": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\VaultWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Ui\\VaultWindow.xaml.cs",
+              "ToolTip": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\VaultWindow.xaml.cs",
+              "RelativeToolTip": "Ui\\VaultWindow.xaml.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAowCwAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T11:29:19.585Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Login.xaml",
+              "DocumentMoniker": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\Login.xaml",
+              "RelativeDocumentMoniker": "Ui\\Login.xaml",
+              "ToolTip": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\Login.xaml",
+              "RelativeToolTip": "Ui\\Login.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-26T14:16:15.962Z"
+              "WhenOpened": "2025-04-25T19:48:12.873Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Login.xaml.cs",
+              "DocumentMoniker": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\Login.xaml.cs",
+              "RelativeDocumentMoniker": "Ui\\Login.xaml.cs",
+              "ToolTip": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\Login.xaml.cs",
+              "RelativeToolTip": "Ui\\Login.xaml.cs",
+              "ViewState": "AQIAADcAAACAMzMzMzMXwHAAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-25T20:17:06.254Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "EncryptDecryptService.cs",
+              "DocumentMoniker": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Services\\EncryptDecryptService.cs",
+              "RelativeDocumentMoniker": "Services\\EncryptDecryptService.cs",
+              "ToolTip": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Services\\EncryptDecryptService.cs",
+              "RelativeToolTip": "Services\\EncryptDecryptService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T12:28:42.65Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "RecoveryWindow.xaml.cs",
+              "DocumentMoniker": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\RecoveryWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Ui\\RecoveryWindow.xaml.cs",
+              "ToolTip": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\RecoveryWindow.xaml.cs",
+              "RelativeToolTip": "Ui\\RecoveryWindow.xaml.cs",
+              "ViewState": "AQIAADgAAACAZmZmZmYawEUAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T12:04:58.88Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "RegisterWindow.xaml.cs",
+              "DocumentMoniker": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\RegisterWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Ui\\RegisterWindow.xaml.cs",
+              "ToolTip": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\RegisterWindow.xaml.cs",
+              "RelativeToolTip": "Ui\\RegisterWindow.xaml.cs",
+              "ViewState": "AQIAAAoAAAAALzMzMzMLwEAAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-25T20:16:35.15Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PasswordPromptWindow.xaml.cs",
+              "DocumentMoniker": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\PasswordPromptWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Ui\\PasswordPromptWindow.xaml.cs",
+              "ToolTip": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\PasswordPromptWindow.xaml.cs",
+              "RelativeToolTip": "Ui\\PasswordPromptWindow.xaml.cs",
+              "ViewState": "AQIAADIAAAAAzszMzMwMwEkAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T14:49:23.891Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 22,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "Ui\\MainWindow.xaml.cs",
-              "ToolTip": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\MainWindow.xaml.cs",
-              "RelativeToolTip": "Ui\\MainWindow.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAABAAAA",
+              "Title": "EditCredential.xaml.cs",
+              "DocumentMoniker": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\EditCredential.xaml.cs",
+              "RelativeDocumentMoniker": "Ui\\EditCredential.xaml.cs",
+              "ToolTip": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\EditCredential.xaml.cs",
+              "RelativeToolTip": "Ui\\EditCredential.xaml.cs",
+              "ViewState": "AQIAAFYAAABAm5mZmZkZwG4AAABOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T19:08:43.795Z"
+              "WhenOpened": "2025-04-27T18:59:37.233Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 26,
               "Title": "DatabaseService.cs",
               "DocumentMoniker": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Services\\DatabaseService.cs",
               "RelativeDocumentMoniker": "Services\\DatabaseService.cs",
@@ -456,7 +467,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 28,
               "Title": "Credential.cs",
               "DocumentMoniker": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Models\\Credential.cs",
               "RelativeDocumentMoniker": "Models\\Credential.cs",
@@ -480,7 +491,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 27,
               "Title": "HelpWindow.xaml.cs",
               "DocumentMoniker": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\HelpWindow.xaml.cs",
               "RelativeDocumentMoniker": "Ui\\HelpWindow.xaml.cs",
@@ -492,7 +503,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 25,
               "Title": "AssemblyInfo.cs",
               "DocumentMoniker": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\AssemblyInfo.cs",
               "RelativeDocumentMoniker": "AssemblyInfo.cs",
@@ -504,7 +515,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 24,
               "Title": "EditCredential.xaml",
               "DocumentMoniker": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Ui\\EditCredential.xaml",
               "RelativeDocumentMoniker": "Ui\\EditCredential.xaml",
@@ -515,7 +526,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "AuthService.cs",
               "DocumentMoniker": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Services\\AuthService.cs",
               "RelativeDocumentMoniker": "Services\\AuthService.cs",

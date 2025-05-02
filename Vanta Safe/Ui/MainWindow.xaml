@@ -10,7 +10,7 @@
         >
 
     <Window.Background>
-        <ImageBrush ImageSource="G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\Assets\venta-black.jpg" Stretch="UniformToFill"/>
+        <ImageBrush ImageSource="G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\Assets\bg2.jpg" Stretch="UniformToFill"/>
     </Window.Background>
     <Grid>
         <Grid.RowDefinitions>
@@ -22,19 +22,20 @@
         <!-- Header -->
         <TextBlock Text="Welcome to VantaSafe" 
                    Foreground="#00FF00" 
-                   FontSize="30" 
+                   FontSize="36" 
+                   
                    HorizontalAlignment="Center" 
-                   Margin="0,30,0,10"
+                   Margin="600,100,0,10"
                    FontWeight="Bold"/>
 
         <!-- Blinking Emoji -->
         <TextBlock x:Name="SecurityEmoji"
                    Text="🔒"
-                   FontSize="50"
+                   FontSize="70"
                    HorizontalAlignment="Center"
                    Foreground="#00FF00" 
                    Grid.Row="1"
-                   Margin="0,20,0,10"
+                   Margin="600,20,0,10"
                    Opacity="1" RenderTransformOrigin="0.552,0.995">
             <TextBlock.Triggers>
                 <EventTrigger RoutedEvent="Loaded">
@@ -49,30 +50,109 @@
         </TextBlock>
 
         <!-- Buttons -->
-        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,41,0,0">
-            <Border CornerRadius="2" BorderThickness="2" BorderBrush="Black" Margin="10">
-                <Button Content="Register"
-            Background="Black"
-            Foreground="#00FF00"
-            FontWeight="Bold"
-            BorderThickness="0"
-            Cursor="Hand" Height="104" Width="100"
-            Click="RegisterClick"            
-                        />
-                
-            </Border>
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="600,10,0,0">
+            <Button Width="250" Height="160" Click="RegisterClick">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Grid>
+                                <!-- Mirrored L-shape -->
+                                <Path x:Name="buttonShape"
+                      Fill="Transparent"
+                                      
+                      Stroke="#00FF00"
+                      StrokeThickness="5"
+                      Data="M100,0 L30,0 L0,30 L0,60 L70,60 L100,30 Z"
+                      Stretch="Fill"/>
+                                <ContentPresenter HorizontalAlignment="Center" 
+                                  VerticalAlignment="Center"
+                                  Margin="35,0,15,0"/>
+                            </Grid>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter TargetName="buttonShape" Property="Stroke" Value="White"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Button.Template>
+                    <TextBlock Text=" R E G I S T E R" Foreground="#00FF00" FontSize="16"/>
+                <Button.Style>
+                    <Style TargetType="Button" BasedOn="{StaticResource HoverButtonStyle}">
+                        <Setter Property="Foreground" Value="#00FF00"/>
+                        <Setter Property="FontWeight" Value="Bold"/>
+                        <Setter Property="Padding" Value="0"/>
+                    </Style>
+                </Button.Style>
+            </Button>
+            <!-- Diamond-shaped EXIT button (corrected) -->
+            <Button Content="E X I T" FontSize="16" Width="150" Height="160" Margin="5,100,0,0" Click="ExitClick">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <!-- Diamond shape (rotated square) -->
+                            <Path x:Name="buttonShape"
+                      Fill="Transparent"
+                      Stroke="#00FF00"
+                                 
+                      StrokeThickness="5"
+                      Data="M30,0 L60,30 L30,60 L0,30 Z"
+                      Stretch="Fill"/>
+                            <ContentPresenter HorizontalAlignment="Center" 
+                                  VerticalAlignment="Center">
+                                <ContentPresenter.LayoutTransform>
+                                    <!-- No rotation needed for text - diamond shape is already rotated -->
+                                    <RotateTransform Angle="0"/>
+                                </ContentPresenter.LayoutTransform>
+                            </ContentPresenter>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="buttonShape" Property="Stroke" Value="White"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+                <Button.Style>
+                    <Style TargetType="Button" BasedOn="{StaticResource HoverButtonStyle}">
+                        <Setter Property="Foreground" Value="#00FF00"/>
+                        <Setter Property="FontWeight" Value="Bold"/>
+                        <Setter Property="Padding" Value="0"/>
+                    </Style>
+                </Button.Style>
+            </Button>
 
 
-            <Border CornerRadius="2" BorderThickness="2" BorderBrush="Black" Margin="10">
-                <Button Content="Login"
-            Background="Black"
-            Foreground="#00FF00"
-            FontWeight="Bold"
-            BorderThickness="0"
-                      
-            Cursor="Hand" Width="100"
-                        Click="LoginClick"/>
-            </Border>
+            <Button Width="250" Height="160" Margin="10,0" Click="LoginClick">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <!-- Custom L-shaped path -->
+                            <Path x:Name="buttonShape"
+                      Fill="Transparent"
+                      Stroke="#00FF00"
+                      StrokeThickness="5"
+                      Data="M0,0 L70,0 L100,30 L100,60 L30,60 L0,30 Z"
+                      Stretch="Fill"/>
+                            <ContentPresenter HorizontalAlignment="Center" 
+                                  VerticalAlignment="Center"
+                                  Margin="15,0,35,0"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="buttonShape" Property="Stroke" Value="White"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+                <TextBlock Text="L O G I N" Foreground="#00FF00" FontSize="16"/>
+                <Button.Style>
+                    <Style TargetType="Button" BasedOn="{StaticResource HoverButtonStyle}">
+                        <Setter Property="Foreground" Value="#00FF00"/>
+                        <Setter Property="FontWeight" Value="Bold"/>
+                        <Setter Property="Padding" Value="0"/>
+                    </Style>
+                </Button.Style>
+            </Button>
+
         </StackPanel>
     </Grid>
 </Window>

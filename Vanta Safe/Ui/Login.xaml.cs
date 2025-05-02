@@ -111,5 +111,13 @@ namespace Vanta_Safe.Ui
             var v = new RecoveryWindow();
             v.ShowDialog();
         }
+
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.Key == Key.Enter)
+            {
+                BtnLogin_Click(sender, e);
+            }
+        }
     }
 }

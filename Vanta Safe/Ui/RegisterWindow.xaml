@@ -5,11 +5,12 @@
         Height="450" 
         Width="800"
         WindowStartupLocation="CenterScreen"
+        KeyDown="Window_KeyDown"
         WindowState="Maximized"
         >
 
     <Window.Background>
-        <ImageBrush ImageSource="G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\Assets\venta-black.jpg" Stretch="UniformToFill"/>
+        <ImageBrush ImageSource="G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\Assets\green_esport_background_03.jpg" Stretch="UniformToFill"/>
     </Window.Background>
 
     <Grid>
@@ -23,19 +24,21 @@
         Background="Transparent" Foreground="#00FF00"
         BorderThickness="0" FontSize="20"
         Click="BtnBack_Click"/>
-        <!-- Header -->
-        <TextBlock Text="Create Master Account" 
-                   Foreground="#00FF00" 
-                   FontSize="24" 
-                   HorizontalAlignment="Center" 
-                   Margin="0,30,0,20"
-                   FontWeight="Bold"/>
+        
+        
 
         <!-- Registration Form -->
         <StackPanel Grid.Row="1" 
                     VerticalAlignment="Center" 
                     HorizontalAlignment="Center" 
-                    Width="350">
+                    Width="360">
+            <!-- Header -->
+            <TextBlock Text="Create Master Account" 
+           Foreground="#00FF00" 
+           FontSize="24" 
+           HorizontalAlignment="Center" 
+           Margin="0,-40,0,10"
+           FontWeight="Bold"/>
 
             <!-- Username Field -->
             <TextBox x:Name="txtUsername" 
@@ -106,10 +109,11 @@
             <!-- Register Button -->
             <Button x:Name="btnRegister"
                     Content="Register"
-                    Background="Black"
+                    Background="Transparent"
                     Foreground="#00FF00"
                     FontWeight="Bold"
                     BorderThickness="1"
+        Style="{StaticResource HoverButtonStyle}"
                     BorderBrush="#00FF00"
                     Padding="15,5"
                     Cursor="Hand"
