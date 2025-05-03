@@ -36,6 +36,20 @@ namespace Vanta_Safe.Ui
                 txtError.Visibility = Visibility.Visible;
                 return;
             }
+            // Only allow a-z, A-Z, 0-9, _, ., @
+            if (!Regex.IsMatch(txtUsername.Text, @"^[a-zA-Z0-9_.@]+$"))
+            {
+                txtError.Text = "Username can only contain letters, numbers, '_', '.' and '@'";
+                txtError.Visibility = Visibility.Visible;
+                return;
+            }
+            // Disallow usernames with only numbers
+            if (Regex.IsMatch(txtUsername.Text, @"^\d+$"))
+            {
+                txtError.Text = "Username cannot be numbers only. use letters as well";
+                txtError.Visibility = Visibility.Visible;
+                return;
+            }
 
             // Validate password complexity
             var (isValid, errorMessage) = PasswordValidator.Validate(txtPassword.Password);

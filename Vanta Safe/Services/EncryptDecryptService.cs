@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
+using System.Security.Cryptography.Xml;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace Vanta_Safe.Services
 {
@@ -25,9 +27,11 @@ namespace Vanta_Safe.Services
                 byte[] ciphertext = new byte[encryptedData.Length - iv.Length];
                 Array.Copy(encryptedData, iv.Length, ciphertext, 0, ciphertext.Length);
 
-                // Decrypt
+                // Set decryption configuration
                 aes.Key = masterKey;
                 aes.IV = iv;
+                aes.Mode = CipherMode.CBC;
+                aes.Padding = PaddingMode.PKCS7;
 
                 using (ICryptoTransform decryptor = aes.CreateDecryptor())
                 using (MemoryStream ms = new MemoryStream(ciphertext))
@@ -61,6 +65,8 @@ namespace Vanta_Safe.Services
             {
                 aes.Key = masterKey;
                 aes.GenerateIV(); // Unique IV per encryption
+                aes.Mode = CipherMode.CBC;
+                aes.Padding = PaddingMode.PKCS7;
 
                 using (var encryptor = aes.CreateEncryptor())
                 using (var ms = new MemoryStream())

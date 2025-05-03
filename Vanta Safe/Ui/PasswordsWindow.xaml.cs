@@ -44,12 +44,7 @@ namespace Vanta_Safe.Ui
                 return;
            
         }
-        //private void txtSearch_TextChanged(object sender, TextChangedEventArgs e)
-        //{
-        //    lstPasswords.ItemsSource
-        //        .Filter = item => ((Credential)item).Encoding.Unicode.GetString(EncryptedSiteName)
-        //                          .Contains(txtSearch.Text, StringComparison.OrdinalIgnoreCase);
-        //}
+       
         private void Window_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Escape)
@@ -94,9 +89,9 @@ namespace Vanta_Safe.Ui
                 {
                     while (reader.Read())
                     {
-                        string siteName = DecryptField((byte[])reader["EncryptedSiteName"], masterKey);
-                        string url = DecryptField((byte[])reader["EncryptedSiteUrl"], masterKey);
-                        string username = DecryptField((byte[])reader["EncryptedUsername"], masterKey);
+                        string siteName = EncryptDecryptService.DecryptSafely((byte[])reader["EncryptedSiteName"], masterKey);
+                        string url = EncryptDecryptService.DecryptSafely((byte[])reader["EncryptedSiteUrl"], masterKey);
+                        string username = EncryptDecryptService.DecryptSafely((byte[])reader["EncryptedUsername"], masterKey);
 
                         if (siteName.Contains(text, StringComparison.OrdinalIgnoreCase) ||
                             url.Contains(text, StringComparison.OrdinalIgnoreCase) ||
@@ -134,30 +129,11 @@ namespace Vanta_Safe.Ui
                     while (reader.Read())
                     {
                         // Decrypt only SiteName + URL for the list
-                        string siteName = DecryptField((byte[])reader["EncryptedSiteName"], masterKey);
-                        string url = DecryptField((byte[])reader["EncryptedSiteUrl"], masterKey);
+                        string siteName = EncryptDecryptService.DecryptSafely((byte[])reader["EncryptedSiteName"], masterKey);
+                        string url = EncryptDecryptService.DecryptSafely((byte[])reader["EncryptedSiteUrl"], masterKey);
 
                         lstPasswords.Items.Add($"{siteName}\nlink: {url}");
                     }
-                }
-            }
-        }
-
-        private string DecryptField(byte[] encryptedData, byte[] masterKey)
-        {
-            using (var aes = Aes.Create())
-            {
-                aes.Key = masterKey;
-                byte[] iv = new byte[16];
-                Array.Copy(encryptedData, iv, 16); // Extract IV
-                aes.IV = iv;
-
-                using (var decryptor = aes.CreateDecryptor())
-                using (var ms = new MemoryStream(encryptedData, 16, encryptedData.Length - 16))
-                using (var cs = new CryptoStream(ms, decryptor, CryptoStreamMode.Read))
-                using (var reader = new StreamReader(cs))
-                {
-                    return reader.ReadToEnd();
                 }
             }
         }
@@ -211,12 +187,9 @@ namespace Vanta_Safe.Ui
 
                                 masterKey = (byte[])Application.Current.Properties["MasterKey"];
                                 string deviceSecret = (string)Application.Current.Properties["DeviceSecret"];
-                                var detailWindow = new PassCRUD(credential, masterKey)
-                                {
-                                    Owner = this
-                                };
+                                Window detailWindow = new PassCRUD(credential, masterKey);
                                 detailWindow.Show();
-
+                                btnRefresh_Click(sender, e);
                                 // Immediately clear temporary storage
                                 //Application.Current.Properties.Remove("TempMasterKey");
                                 //Application.Current.Properties.Remove("TempDeviceSecret");

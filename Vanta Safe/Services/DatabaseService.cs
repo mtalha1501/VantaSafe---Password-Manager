@@ -18,14 +18,6 @@ namespace Vanta_Safe.Services
 
         public static string ConnectionString => $"Data Source={_dbPath};";
 
-        private static byte[] GenerateAndSaveKey()
-        {
-            var key = new byte[32];
-            RandomNumberGenerator.Fill(key);
-            DPAPIService.SaveEncryptedKey(key);
-            return key;
-        }
-
         public static void Initialize()
         {
             try
@@ -59,7 +51,8 @@ namespace Vanta_Safe.Services
         Username TEXT NOT NULL UNIQUE,
         MasterKeyHash TEXT NOT NULL,
         DeviceSecret TEXT NOT NULL,
-        FailedAttempts INTEGER DEFAULT 0
+        FailedAttempts INTEGER DEFAULT 0,
+        EncryptedMasterKey BLOB DEFAULT NULL
     );
     CREATE TABLE IF NOT EXISTS Credentials (
         Id INTEGER PRIMARY KEY AUTOINCREMENT,

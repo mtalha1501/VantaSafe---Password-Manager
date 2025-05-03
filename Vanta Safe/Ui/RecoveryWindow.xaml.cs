@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Printing.IndexedProperties;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -36,6 +37,7 @@ namespace Vanta_Safe.Ui
             string username = UsernameTextBox.Text.Trim();
             string secretKey = SecretKeyTextBox.Text.Trim();
 
+
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(secretKey))
             {
                 StatusMessage.Text = "Please fill all fields.";
@@ -44,9 +46,26 @@ namespace Vanta_Safe.Ui
 
             bool recoverySuccessful = TryRecoverAccount(username, secretKey);
 
+            byte[] aesKey = AuthService.DeriveKeyFromDeviceSecretOnly(secretKey);
+
             if (recoverySuccessful)
             {
-                MessageBox.Show("Account successfully recovered!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+                byte[] EncryptedKey; 
+                using (var connection = new SqliteConnection(DatabaseService.ConnectionString))
+                {
+                    connection.Open();
+                    var command = connection.CreateCommand();
+                    command.CommandText = @"
+                                SELECT EncryptedMasterKey 
+                                FROM Users 
+                                WHERE Username = @username AND DeviceSecret = @secretKey";
+                    command.Parameters.AddWithValue("@username", username);
+                    command.Parameters.AddWithValue("@secretKey", secretKey);
+                    EncryptedKey = (byte[])command.ExecuteScalar();
+
+                }
+                var masterPassword = EncryptDecryptService.DecryptField(EncryptedKey, aesKey);
+                MessageBox.Show("Account successfully recovered!\n Please Remember Your Master Key: "+masterPassword+"\nRegards Vanta Safe Team", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
                 this.Close();
             }
             else

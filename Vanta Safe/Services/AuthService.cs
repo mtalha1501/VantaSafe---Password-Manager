@@ -26,6 +26,15 @@ namespace Vanta_Safe.Services
                 masterPassword + deviceSecret,
                 BCrypt.Net.HashType.SHA384,
                 HashWorkFactor);
+            byte[] masterKeyBytes = Encoding.UTF8.GetBytes(masterPassword);
+
+            // Ensure masterKey is a valid AES key size (use SHA256 hash to get 256-bit key)
+            // ✅ Good for recovery
+            var aesKey = DeriveKeyFromDeviceSecretOnly(deviceSecret); // Not using masterPassword
+            var encryptedMasterKey = EncryptDecryptService.EncryptField(masterPassword, aesKey);
+
+            Console.WriteLine("REGISTER AES KEY: " + Convert.ToBase64String(aesKey));
+
 
             try
             {
@@ -34,13 +43,13 @@ namespace Vanta_Safe.Services
                     connection.Open();
                     var cmd = connection.CreateCommand();
                     cmd.CommandText = @"
-                        INSERT INTO Users (Username, MasterKeyHash, DeviceSecret) 
-                        VALUES (@username, @hash, @secret)";
+                        INSERT INTO Users (Username, MasterKeyHash, DeviceSecret,EncryptedMasterKey) 
+                        VALUES (@username, @hash, @secret,@encryptedMasterKey)";
 
                     cmd.Parameters.AddWithValue("@username", username);
                     cmd.Parameters.AddWithValue("@hash", hashedMaster);
                     cmd.Parameters.AddWithValue("@secret", deviceSecret);
-
+                    cmd.Parameters.AddWithValue("@encryptedMasterKey", encryptedMasterKey);
                     return cmd.ExecuteNonQuery() == 1;
                 }
             }
@@ -62,36 +71,18 @@ namespace Vanta_Safe.Services
             return pbkdf2.GetBytes(AesKeySize / 8); // 32 bytes for AES-256
         }
 
-        public static bool VerifyUser(string username, string masterPassword, out string deviceSecret)
+        public static byte[] DeriveKeyFromDeviceSecretOnly(string deviceSecret)
         {
-            deviceSecret = null;
-
-            using (var connection = new SqliteConnection(DatabaseService.ConnectionString))
-            {
-                connection.Open();
-                var cmd = connection.CreateCommand();
-                cmd.CommandText = "SELECT MasterKeyHash, DeviceSecret FROM Users WHERE Username = @username";
-                cmd.Parameters.AddWithValue("@username", username);
-
-                using (var reader = cmd.ExecuteReader())
-                {
-                    if (reader.Read())
-                    {
-                        string storedHash = reader.GetString(0);
-                        deviceSecret = reader.GetString(1);
-                        return BCrypt.Net.BCrypt.EnhancedVerify(
-                            masterPassword + deviceSecret,
-                            storedHash,
-                            BCrypt.Net.HashType.SHA384);
-                    }
-                }
-            }
-            return false;
+            byte[] salt = Encoding.UTF8.GetBytes(deviceSecret);
+            using var pbkdf2 = new Rfc2898DeriveBytes(
+                password: deviceSecret, // ⛔ NOT masterPassword + deviceSecret
+                salt: salt,
+                iterations: 100_000,
+                hashAlgorithm: HashAlgorithmName.SHA256
+            );
+            return pbkdf2.GetBytes(32); // 32 bytes for AES-256
         }
 
-        // Add these methods to AuthService.cs
-        private static string HashMasterPassword(string password, string secret)
-            => BCrypt.Net.BCrypt.EnhancedHashPassword(password + secret, BCrypt.Net.HashType.SHA384);
 
         public static bool VerifyMasterPassword(string password, string username, out string deviceSecret)
         {
