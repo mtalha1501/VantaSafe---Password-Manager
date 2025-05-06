@@ -5,7 +5,7 @@
        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
        xmlns:local="clr-namespace:Vanta_Safe"
        mc:Ignorable="d"
-       Title="MainWindow" Height="450" Width="800"
+       Title="MainWindow" Height="685" Width="1361"
        WindowState="Maximized"
         >
 
@@ -52,29 +52,29 @@
         <!-- Buttons -->
         <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="600,10,0,0">
             <Button Width="250" Height="160" Click="RegisterClick">
-                    <Button.Template>
-                        <ControlTemplate TargetType="Button">
-                            <Grid>
-                                <!-- Mirrored L-shape -->
-                                <Path x:Name="buttonShape"
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <!-- Mirrored L-shape -->
+                            <Path x:Name="buttonShape"
                       Fill="Transparent"
                                       
                       Stroke="#00FF00"
                       StrokeThickness="5"
                       Data="M100,0 L30,0 L0,30 L0,60 L70,60 L100,30 Z"
                       Stretch="Fill"/>
-                                <ContentPresenter HorizontalAlignment="Center" 
+                            <ContentPresenter HorizontalAlignment="Center" 
                                   VerticalAlignment="Center"
                                   Margin="35,0,15,0"/>
-                            </Grid>
-                            <ControlTemplate.Triggers>
-                                <Trigger Property="IsMouseOver" Value="True">
-                                    <Setter TargetName="buttonShape" Property="Stroke" Value="White"/>
-                                </Trigger>
-                            </ControlTemplate.Triggers>
-                        </ControlTemplate>
-                    </Button.Template>
-                    <TextBlock Text=" R E G I S T E R" Foreground="#00FF00" FontSize="16"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="buttonShape" Property="Stroke" Value="White"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+                <TextBlock Text=" R E G I S T E R" Foreground="#00FF00" FontSize="16"/>
                 <Button.Style>
                     <Style TargetType="Button" BasedOn="{StaticResource HoverButtonStyle}">
                         <Setter Property="Foreground" Value="#00FF00"/>

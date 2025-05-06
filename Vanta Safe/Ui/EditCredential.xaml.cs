@@ -24,10 +24,15 @@ namespace Vanta_Safe
     public partial class EditCredential : Window
     {
         Credential credential;
-        public EditCredential(Credential credential)
+        public EditCredential(Credential credential, byte[] masterKey)
         {
             this.credential = credential;
+
+            
             InitializeComponent();
+            txtSiteUrl.Text = EncryptDecryptService.DecryptSafely(this.credential.EncryptedSiteUrl, masterKey);
+            txtSiteName.Text = EncryptDecryptService.DecryptSafely(this.credential.EncryptedSiteName, masterKey);
+            txtUsername.Text = EncryptDecryptService.DecryptSafely(this.credential.EncryptedUsername, masterKey);
         }
 
         private void GoBack_Click(object sender, RoutedEventArgs e)

@@ -188,7 +188,7 @@
             <Setter Property="Background" Value="Transparent"/>
             <Setter Property="Foreground" Value="#00FF00"/>
             <Setter Property="BorderBrush" Value="#00FF00"/>
-            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="BorderThickness" Value="2"/>
             <Setter Property="Width" Value="150"/>
             <Setter Property="Height" Value="35"/>
             <Setter Property="Margin" Value="5"/>
@@ -199,6 +199,7 @@
         <Style x:Key="DangerButtonStyle" BasedOn="{StaticResource ActionButtonStyle}" TargetType="Button">
             <Setter Property="Foreground" Value="#FF0000"/>
             <Setter Property="BorderBrush" Value="#FF0000"/>
+            <Setter Property="BorderThickness" Value="2"/>
         </Style>
     </Application.Resources>
 </Application>

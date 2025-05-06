@@ -22,19 +22,20 @@
                Foreground="#00FF00"
                FontSize="18"
                HorizontalAlignment="Center"/>
-        </StackPanel> 
+        </StackPanel>
 
         <!-- Details Panel -->
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Background="Black" Height="291">
             <!-- Site Name -->
-            <StackPanel Orientation="Horizontal" Margin="0,10">
-                <TextBlock Text="Site: " Width="100" Foreground="#00FF00"/>
+            <StackPanel Orientation="Horizontal" Margin="5,10">
+                <TextBlock Text="Site: " Width="94" Foreground="#00FF00" Height="17"/>
                 <TextBlock x:Name="txtSite" Text="{Binding SiteName}" Foreground="White"/>
             </StackPanel>
 
             <!-- URL -->
-            <StackPanel Orientation="Horizontal" Margin="0,10">
-                <TextBlock Text="URL: " Width="100" Foreground="#00FF00"/>
+            <StackPanel Orientation="Horizontal" Margin="5,10" >
+                    <TextBlock Text="URL: " Width="91" Foreground="#00FF00" Height="17"/>
+                
                 <TextBlock x:Name="txtUrl" Text="{Binding SiteUrl}" Foreground="White"/>
             </StackPanel>
 
@@ -44,7 +45,7 @@
                         Content="Copy Password"
                         Click="CopyPass_Click"
                         Style="{StaticResource ActionButtonStyle}"
-                        Margin="0,0,10,0"/>
+                        Margin="5,0,10,0"/>
 
                 <Button x:Name="btnCopyAll" 
                         Content="Copy All Details"

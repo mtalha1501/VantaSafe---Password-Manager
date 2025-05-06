@@ -30,6 +30,7 @@ namespace Vanta_Safe.Ui
             this.credential = credential;
             this.masterKey = masterKey;
             InitializeComponent();
+           
             txtUrl.Text = EncryptDecryptService.DecryptSafely(credential.EncryptedSiteUrl, masterKey);
             txtSite.Text = EncryptDecryptService.DecryptSafely(credential.EncryptedSiteName, masterKey);
         }
@@ -41,7 +42,7 @@ namespace Vanta_Safe.Ui
 
         private void btnEdit_Click(object sender, RoutedEventArgs e)
         {
-            Window v = new EditCredential(this.credential);
+            Window v = new EditCredential(this.credential,masterKey);
             v.Show();
             this.Close();
 
