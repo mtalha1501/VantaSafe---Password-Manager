@@ -118,10 +118,12 @@ namespace Vanta_Safe.Ui
             {
                 connection.Open();
                 var cmd = connection.CreateCommand();
+
+
                 cmd.CommandText = @"
-            SELECT EncryptedSiteName, EncryptedSiteUrl 
-            FROM Credentials 
-            WHERE UserId = (SELECT Id FROM Users WHERE Username = @username)";
+                SELECT EncryptedSiteName, EncryptedSiteUrl 
+                FROM Credentials 
+                WHERE UserId = (SELECT Id FROM Users WHERE Username = @username)";
                 cmd.Parameters.AddWithValue("@username", currentUser);
 
                 using (var reader = cmd.ExecuteReader())
@@ -154,6 +156,8 @@ namespace Vanta_Safe.Ui
             {
                 connection.Open();
                 var cmd = connection.CreateCommand();
+
+
                 cmd.CommandText = @"
             SELECT * FROM Credentials 
             WHERE UserId = (SELECT Id FROM Users WHERE Username = @currentUser)";
@@ -208,5 +212,9 @@ namespace Vanta_Safe.Ui
             LoadCredentials(); // Your existing method to reload everything
         }
 
+        private void btnSearch_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            SearchPasswords(txtSearch.Text);      
+        }
     }
 }

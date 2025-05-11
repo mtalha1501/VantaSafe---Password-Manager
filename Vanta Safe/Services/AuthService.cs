@@ -92,7 +92,11 @@ namespace Vanta_Safe.Services
             {
                 connection.Open();
                 var cmd = connection.CreateCommand();
-                cmd.CommandText = "SELECT MasterKeyHash, DeviceSecret FROM Users WHERE Username = @username";
+
+                // For Injection Test
+                //cmd.CommandText = $"SELECT MasterKeyHash, DeviceSecret FROM Users WHERE Username = '{username}'";
+
+                cmd.CommandText = "select masterkeyhash, devicesecret from users where username = @username";
                 cmd.Parameters.AddWithValue("@username", username);
 
                 using (var reader = cmd.ExecuteReader())
@@ -105,6 +109,9 @@ namespace Vanta_Safe.Services
                             password + deviceSecret,
                             storedHash,
                             BCrypt.Net.HashType.SHA384);
+
+                        // Injection Test Demo bypass — simulate a successful login
+                        //return true;
                     }
                 }
             }

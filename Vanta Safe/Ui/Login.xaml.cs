@@ -39,8 +39,11 @@ namespace Vanta_Safe.Ui
                 connection.Open();
                 var cmdFetch = connection.CreateCommand();
 
+                // For Injection Test
+                //cmdFetch.CommandText = $"SELECT FailedAttempts FROM Users WHERE Username = '{txtUsername.Text}'";
+
                 // Failed Attempt handle
-                cmdFetch.CommandText  = @"SELECT FailedAttempts FROM Users WHERE Username = @username";
+                cmdFetch.CommandText = @"SELECT FailedAttempts FROM Users WHERE Username = @username";
                 cmdFetch.Parameters.AddWithValue("@username", txtUsername.Text);
 
                 var result = cmdFetch.ExecuteScalar();
@@ -57,7 +60,7 @@ namespace Vanta_Safe.Ui
                 if (failedAttempts >= 5)
                 {
                     txtError.Text = "Account locked due to multiple failed attempts!";
-                    MessageBox.Show("Account has been Locked out for invalid attempts");
+                    MessageBox.Show("Account has been Locked out for invalid attempts\n Closing App");
                     txtError.Visibility = Visibility.Visible;
                     Application.Current.Shutdown();  // Close the app
                     return;
@@ -91,6 +94,7 @@ namespace Vanta_Safe.Ui
                 txtError.Visibility = Visibility.Visible;
                 txtError.Text = "Invalid username or password!";
                 txtError.Visibility = Visibility.Visible;
+                
             }
         }
 
