@@ -195,7 +195,8 @@ Enter your username and device secret
 🔑 Your device secret was shown during registration - store it safely! 
 🛡️ Use it in Acccount Recovery 
 
-##📜 Changelog (v1.0.1)
+## 📜 Changelog (v1.0.1)
+
 ⬆️ Upgraded to .NET 8.0
 
 🏷️ Added explicit x64 support
