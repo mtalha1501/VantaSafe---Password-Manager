@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Vanta Safe")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0abba96183b96a63978a070795ad46483376d563")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f1aee08af4f53952c8442df56184f43605c6bf91")]
 [assembly: System.Reflection.AssemblyProductAttribute("Vanta Safe")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Vanta Safe")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
