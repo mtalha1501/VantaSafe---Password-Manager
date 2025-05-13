@@ -206,7 +206,13 @@ Enter your username and device secret
 # 🤝 Contribute
 Found an issue? Want to improve security?
 Open an Issue
-
+---
+## Runing on Visual Studio (For Developers)
+- build the project
+- Just run "dotnet publish -c Release" on terminal
+- Then run the EXE file in \bin\Release\net8.0-windows\win-x64\publish\Vanta SAfe.exe
+- Now Project will run, it won't run on starting in VS, you can configure VantaSafe.csproj file for runing.
+---
 💎 Your Security Is Our Top Priority
 "In a world of digital threats, Vanta Safe stands guard"
 
