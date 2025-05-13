@@ -12,7 +12,6 @@
 ✅ **100% offline** - Your data never leaves your computer  
 ✅ **Brute force protection** - Auto-lock after 5 failed attempts  
 ✅ **Secure recovery** - Device-secret based account restoration  
-✅ **Clipboard protection** - Auto-clears passwords after 15 seconds  
 
 ---
 
@@ -125,6 +124,7 @@ sequenceDiagram
     DPAPI-->>DB: Unprotected key (in memory)
     UI->>UI: ZeroMemory(plaintext)
 ```
+--- 
 
 ## References (International Security Policies)
 1) OWASP Password Storage Cheat Sheet
@@ -137,6 +137,7 @@ sequenceDiagram
 
 5) RFC 2898 (PBKDF2 specification)
 
+---
 ## Key Algorithms Used:
 - BCrypt (with SHA384) - For password hashing (work factor 12)
 
@@ -148,6 +149,7 @@ sequenceDiagram
 
 - DPAPI - For protecting the SQLite database key
 
+---
 ## Attack Prevention
 🛡️ SQL Injection: Parameterized queries
 
