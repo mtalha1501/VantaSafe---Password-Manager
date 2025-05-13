@@ -13,17 +13,23 @@ namespace Vanta_Safe.Services
 {
     public static class DatabaseService
     {
-        private static string _dbPath = Path.Combine("DB", "Vault.db");
         private static byte[] _dbKey; // DPAPI-managed key
 
+        private static string appDataPath = Path.Combine(
+    Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
+    "VantaSafe", "DB");
+        private static string _dbPath = Path.Combine(appDataPath, "Vault.db");
         public static string ConnectionString => $"Data Source={_dbPath};";
+
 
         public static void Initialize()
         {
             try
             {
-                // 1. Initialize SQLCipher
-                Directory.CreateDirectory("DB");
+                // 1. Initialize SQLite
+
+                Directory.CreateDirectory(appDataPath);
+
 
                 if (!File.Exists(DPAPIService.KeyPath))
                 {

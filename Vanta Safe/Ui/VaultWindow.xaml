@@ -3,10 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Vault" 
         WindowState="Maximized"
-        Height="600" Width="800">
+        Height="600" Width="1080">
 
     <Window.Background>
-        <ImageBrush ImageSource="G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\Assets\bg2.jpg" Stretch="UniformToFill"/>
+        <ImageBrush ImageSource="pack://application:,,,/Assets/bg2.jpg" Stretch="UniformToFill"/>
     </Window.Background>
 
     <Grid>
@@ -20,7 +20,7 @@
 
             <!-- Animated Lock -->
             <Image x:Name="imgLock" 
-                   Source="G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\Assets\passwords-50.png"
+                   Source="\Assets\passwords-50.png"
                    Width="100" 
                    Height="100"
                    HorizontalAlignment="Center"
@@ -51,7 +51,7 @@
                     Margin="20,0"
                     Click="BtnPasswords_Click" Width="200" Height="150">
                 <StackPanel>
-                    <Image Source="G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\Assets\passw-laptop-32.png" Width="110" Height="80"/>
+                    <Image Source="\Assets\passw-laptop-32.png" Width="110" Height="80"/>
                     <TextBlock Text="         Passwords" Margin="0,5" Foreground="#00FF00"/>
                 </StackPanel>
             </Button>
@@ -63,7 +63,7 @@
                     Click="Help_Click"
                     Margin="20,0">
                 <StackPanel>
-                    <Image Source="G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\Assets\help-80.png" Width="70" Height="80"/>
+                    <Image Source="\Assets\help-80.png" Width="70" Height="80"/>
                     <TextBlock Text="How to Use?" Margin="0,5" Foreground="#00FF00"/>
                 </StackPanel>
             </Button>

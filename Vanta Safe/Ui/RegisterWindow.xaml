@@ -10,7 +10,7 @@
         >
 
     <Window.Background>
-        <ImageBrush ImageSource="G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\Assets\green_esport_background_03.jpg" Stretch="UniformToFill"/>
+        <ImageBrush ImageSource="pack://application:,,,/Assets/green_esport_background_03.jpg" Stretch="UniformToFill"/>
     </Window.Background>
 
     <Grid>

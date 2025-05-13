@@ -1,20 +1,4 @@
-G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Debug\net8.0-windows\Vanta Safe.csproj.AssemblyReference.cache
-G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Debug\net8.0-windows\Ui\PassCRUD.baml
-G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Debug\net8.0-windows\Ui\RegisterWindow.baml
-G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Debug\net8.0-windows\Ui\VaultWindow.baml
-G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Debug\net8.0-windows\Ui\AddCredentialWindow.g.cs
-G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Debug\net8.0-windows\Ui\EditCredential.g.cs
-G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Debug\net8.0-windows\Ui\HelpWindow.g.cs
-G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Debug\net8.0-windows\Ui\Login.g.cs
-G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Debug\net8.0-windows\Ui\MainWindow.g.cs
-G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Debug\net8.0-windows\Ui\PassCRUD.g.cs
-G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Debug\net8.0-windows\Ui\PasswordPromptWindow.g.cs
-G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Debug\net8.0-windows\Ui\PasswordsWindow.g.cs
-G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Debug\net8.0-windows\Ui\RegisterWindow.g.cs
-G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Debug\net8.0-windows\Ui\VaultWindow.g.cs
-G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Debug\net8.0-windows\App.g.cs
-G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Debug\net8.0-windows\Vanta Safe_MarkupCompile.cache
-G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Debug\net8.0-windows\Vanta Safe_MarkupCompile.lref
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Debug\net8.0-windows\Assets\green_esport_background_03.eps
 G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Debug\net8.0-windows\Vanta Safe.exe
 G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Debug\net8.0-windows\Vanta Safe.deps.json
 G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Debug\net8.0-windows\Vanta Safe.runtimeconfig.json
@@ -59,6 +43,25 @@ G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Debug\net8.0-windows\run
 G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Debug\net8.0-windows\runtimes\win-x64\native\e_sqlite3.dll
 G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Debug\net8.0-windows\runtimes\win-x86\native\e_sqlite3.dll
 G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Debug\net8.0-windows\Vanta Safe.csproj.AssemblyReference.cache
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Debug\net8.0-windows\Ui\PassCRUD.baml
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Debug\net8.0-windows\Ui\RegisterWindow.baml
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Debug\net8.0-windows\Ui\VaultWindow.baml
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Debug\net8.0-windows\Ui\AddCredentialWindow.g.cs
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Debug\net8.0-windows\Ui\EditCredential.g.cs
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Debug\net8.0-windows\Ui\HelpWindow.g.cs
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Debug\net8.0-windows\Ui\Login.g.cs
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Debug\net8.0-windows\Ui\MainWindow.g.cs
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Debug\net8.0-windows\Ui\PassCRUD.g.cs
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Debug\net8.0-windows\Ui\PasswordPromptWindow.g.cs
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Debug\net8.0-windows\Ui\PasswordsWindow.g.cs
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Debug\net8.0-windows\Ui\RecoveryWindow.g.cs
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Debug\net8.0-windows\Ui\RegisterWindow.g.cs
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Debug\net8.0-windows\Ui\VaultWindow.g.cs
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Debug\net8.0-windows\App.g.cs
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Debug\net8.0-windows\Vanta Safe_Content.g.cs
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Debug\net8.0-windows\Vanta Safe_MarkupCompile.cache
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Debug\net8.0-windows\Vanta Safe_MarkupCompile.lref
 G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Debug\net8.0-windows\App.baml
 G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Debug\net8.0-windows\Ui\AddCredentialWindow.baml
 G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Debug\net8.0-windows\Ui\EditCredential.baml
@@ -67,6 +70,7 @@ G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Debug\net8.0-windows\Ui\
 G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Debug\net8.0-windows\Ui\MainWindow.baml
 G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Debug\net8.0-windows\Ui\PasswordPromptWindow.baml
 G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Debug\net8.0-windows\Ui\PasswordsWindow.baml
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Debug\net8.0-windows\Ui\RecoveryWindow.baml
 G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Debug\net8.0-windows\Vanta Safe.g.resources
 G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Debug\net8.0-windows\Vanta Safe.GeneratedMSBuildEditorConfig.editorconfig
 G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Debug\net8.0-windows\Vanta Safe.AssemblyInfoInputs.cache
@@ -79,5 +83,3 @@ G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Debug\net8.0-windows\ref
 G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Debug\net8.0-windows\Vanta Safe.pdb
 G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Debug\net8.0-windows\Vanta Safe.genruntimeconfig.cache
 G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Debug\net8.0-windows\ref\Vanta Safe.dll
-G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Debug\net8.0-windows\Ui\RecoveryWindow.g.cs
-G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Debug\net8.0-windows\Ui\RecoveryWindow.baml

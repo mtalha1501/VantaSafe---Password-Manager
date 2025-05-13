@@ -79,7 +79,7 @@ namespace Vanta_Safe
                 }
                 else
                 {
-                    MessageBox.Show("Credential saved successfully!", "Success",
+                    MessageBox.Show("UPDATED Credential saved successfully!", "Success",
                                MessageBoxButton.OK, MessageBoxImage.Information);
                 }
 
@@ -103,15 +103,15 @@ namespace Vanta_Safe
             {
                 connection.Open();
 
-                // Check duplicates via decryption
-                if (CredentialExists(connection, currentUser,
-                    (byte[])Application.Current.Properties["MasterKey"],
-                    txtUsername.Text, txtSiteUrl.Text))
-                {
-                    MessageBox.Show("This credential already exists!", "Duplicate",
-                                   MessageBoxButton.OK, MessageBoxImage.Warning);
-                    return false;
-                }
+                //// Check duplicates via decryption
+                //if (CredentialExists(connection, currentUser,
+                //    (byte[])Application.Current.Properties["MasterKey"],
+                //    txtUsername.Text, txtSiteUrl.Text))
+                //{
+                //    MessageBox.Show("This credential already exists!", "Duplicate",
+                //                   MessageBoxButton.OK, MessageBoxImage.Warning);
+                //    return false;
+                //}
 
                 byte[] masterKey = (byte[])Application.Current.Properties["MasterKey"];
                 byte[] usernameHash = AuthService.GenerateHash(txtUsername.Text, masterKey);

@@ -1,0 +1,20 @@
+﻿Vanta Safe
+
+
+winexe
+C#
+.cs
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Release\net8.0-windows\
+Vanta_Safe
+none
+false
+TRACE;RELEASE;NET;NET8_0;NETCOREAPP
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\App.xaml
+11-294054430
+211843925490
+2012000218
+217-58634903
+Ui\AddCredentialWindow.xaml;Ui\EditCredential.xaml;Ui\HelpWindow.xaml;Ui\Login.xaml;Ui\MainWindow.xaml;Ui\PassCRUD.xaml;Ui\PasswordPromptWindow.xaml;Ui\PasswordsWindow.xaml;Ui\RecoveryWindow.xaml;Ui\RegisterWindow.xaml;Ui\VaultWindow.xaml;
+
+False
+

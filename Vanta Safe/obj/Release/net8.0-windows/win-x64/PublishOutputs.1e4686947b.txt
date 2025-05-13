@@ -1,0 +1,2 @@
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\win-x64\publish\Vanta Safe.pdb
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\win-x64\publish\Vanta Safe.exe

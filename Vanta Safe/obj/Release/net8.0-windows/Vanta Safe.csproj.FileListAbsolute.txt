@@ -1,0 +1,104 @@
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\Vanta Safe.exe
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\Vanta Safe.deps.json
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\Vanta Safe.runtimeconfig.json
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\Vanta Safe.dll
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\Vanta Safe.pdb
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\BCrypt.Net-Next.dll
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\Microsoft.AspNetCore.Cryptography.Internal.dll
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\Microsoft.AspNetCore.DataProtection.dll
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\Microsoft.AspNetCore.DataProtection.Abstractions.dll
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\Microsoft.AspNetCore.DataProtection.Extensions.dll
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\Microsoft.Bcl.Cryptography.dll
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\Microsoft.Data.Sqlite.dll
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\Microsoft.Extensions.DependencyInjection.dll
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\Microsoft.Extensions.Diagnostics.Abstractions.dll
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\Microsoft.Extensions.Hosting.Abstractions.dll
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\Microsoft.Extensions.Options.dll
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\Microsoft.Extensions.Primitives.dll
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\SQLitePCLRaw.batteries_v2.dll
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\SQLitePCLRaw.core.dll
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\SQLitePCLRaw.provider.e_sqlite3.dll
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\System.Diagnostics.DiagnosticSource.dll
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\System.Formats.Asn1.dll
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\System.Security.Cryptography.Pkcs.dll
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\System.Security.Cryptography.Xml.dll
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\runtimes\alpine-x64\native\libe_sqlite3.so
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\runtimes\linux-arm\native\libe_sqlite3.so
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\runtimes\linux-arm64\native\libe_sqlite3.so
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\runtimes\linux-armel\native\libe_sqlite3.so
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\runtimes\linux-mips64\native\libe_sqlite3.so
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\runtimes\linux-musl-x64\native\libe_sqlite3.so
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\runtimes\linux-s390x\native\libe_sqlite3.so
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\runtimes\linux-x64\native\libe_sqlite3.so
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\runtimes\linux-x86\native\libe_sqlite3.so
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\runtimes\osx-arm64\native\libe_sqlite3.dylib
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\runtimes\osx-x64\native\libe_sqlite3.dylib
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\runtimes\win-arm\native\e_sqlite3.dll
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\runtimes\win-arm64\native\e_sqlite3.dll
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\runtimes\win-x64\native\e_sqlite3.dll
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\runtimes\win-x86\native\e_sqlite3.dll
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Release\net8.0-windows\Vanta Safe.csproj.AssemblyReference.cache
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Release\net8.0-windows\Ui\PassCRUD.baml
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Release\net8.0-windows\Ui\RegisterWindow.baml
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Release\net8.0-windows\Ui\VaultWindow.baml
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Release\net8.0-windows\Ui\AddCredentialWindow.g.cs
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Release\net8.0-windows\Ui\EditCredential.g.cs
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Release\net8.0-windows\Ui\HelpWindow.g.cs
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Release\net8.0-windows\Ui\Login.g.cs
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Release\net8.0-windows\Ui\MainWindow.g.cs
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Release\net8.0-windows\Ui\PassCRUD.g.cs
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Release\net8.0-windows\Ui\PasswordPromptWindow.g.cs
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Release\net8.0-windows\Ui\PasswordsWindow.g.cs
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Release\net8.0-windows\Ui\RecoveryWindow.g.cs
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Release\net8.0-windows\Ui\RegisterWindow.g.cs
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Release\net8.0-windows\Ui\VaultWindow.g.cs
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Release\net8.0-windows\App.g.cs
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Release\net8.0-windows\Vanta Safe_Content.g.cs
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Release\net8.0-windows\Vanta Safe_MarkupCompile.cache
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Release\net8.0-windows\Vanta Safe_MarkupCompile.lref
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Release\net8.0-windows\App.baml
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Release\net8.0-windows\Ui\AddCredentialWindow.baml
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Release\net8.0-windows\Ui\EditCredential.baml
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Release\net8.0-windows\Ui\HelpWindow.baml
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Release\net8.0-windows\Ui\Login.baml
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Release\net8.0-windows\Ui\MainWindow.baml
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Release\net8.0-windows\Ui\PasswordPromptWindow.baml
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Release\net8.0-windows\Ui\PasswordsWindow.baml
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Release\net8.0-windows\Ui\RecoveryWindow.baml
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Release\net8.0-windows\Vanta Safe.g.resources
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Release\net8.0-windows\Vanta Safe.GeneratedMSBuildEditorConfig.editorconfig
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Release\net8.0-windows\Vanta Safe.AssemblyInfoInputs.cache
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Release\net8.0-windows\Vanta Safe.AssemblyInfo.cs
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Release\net8.0-windows\Vanta Safe.csproj.CoreCompileInputs.cache
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Release\net8.0-windows\Vanta Safe.sourcelink.json
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Release\net8.0-windows\Vanta Safe.csproj.Up2Date
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Release\net8.0-windows\Vanta Safe.dll
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Release\net8.0-windows\refint\Vanta Safe.dll
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Release\net8.0-windows\Vanta Safe.pdb
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Release\net8.0-windows\Vanta Safe.genruntimeconfig.cache
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\obj\Release\net8.0-windows\ref\Vanta Safe.dll
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\Assets\beg4.jpg
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\Assets\beg5.jpg
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\Assets\bg-new.png
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\Assets\bg3.jpeg
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\Assets\green-black.jpg
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\Assets\green_esport_background_03.eps
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\Assets\green_esport_background_03.jpg
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\Assets\help-80.png
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\Assets\icon-512.ico
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\Assets\bg2.jpg
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\Assets\passv2.jpeg
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\Assets\passVer.jpg
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\Assets\passw-laptop-32.png
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\Assets\passwords-50.png
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\Assets\play_store_512.ico
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\Assets\refresh.png
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\Assets\security-add.png
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\Assets\sheild-icon.png
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\Assets\user-lock.svg
+G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\bin\Release\net8.0-windows\Assets\venta-black.jpg

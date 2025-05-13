@@ -8,7 +8,7 @@
         WindowState="Maximized"
         Title="HelpWindow" Height="550" Width="800">
     <Window.Background>
-        <ImageBrush ImageSource="G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\Assets\venta-black.jpg" Stretch="UniformToFill"/>
+        <ImageBrush ImageSource="pack://application:,,,/Assets/venta-black.jpg" Stretch="UniformToFill"/>
     </Window.Background>
     <Grid Margin="20">
        

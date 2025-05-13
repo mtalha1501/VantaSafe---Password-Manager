@@ -11,10 +11,10 @@ false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\App.xaml
 11-294054430
-
+1681047630
 221993787058
-217-197252698
+217-58634903
 Ui\AddCredentialWindow.xaml;Ui\EditCredential.xaml;Ui\HelpWindow.xaml;Ui\Login.xaml;Ui\MainWindow.xaml;Ui\PassCRUD.xaml;Ui\PasswordPromptWindow.xaml;Ui\PasswordsWindow.xaml;Ui\RecoveryWindow.xaml;Ui\RegisterWindow.xaml;Ui\VaultWindow.xaml;
 
-True
+False
 

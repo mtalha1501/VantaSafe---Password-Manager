@@ -3,19 +3,34 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net8.0-windows</TargetFramework>
-    <RootNamespace>Vanta_Safe</RootNamespace>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <PublishSingleFile>true</PublishSingleFile>
+    <SelfContained>true</SelfContained>
+    <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+    <Trim>false</Trim>
     <UseWPF>true</UseWPF>
+    <Nullable>enable</Nullable>
+    <ApplicationIcon>Assets\icon.ico</ApplicationIcon>
   </PropertyGroup>
 
+  <!-- Remove output file copies from Assets -->
   <ItemGroup>
-    <Compile Remove="DB\**" />
-    <EmbeddedResource Remove="DB\**" />
-    <None Remove="DB\**" />
-    <Page Remove="DB\**" />
+    <None Remove="Assets\**" />
+    <Content Remove="Assets\**" />
+    <Compile Remove="Assets\**" />
   </ItemGroup>
 
+  <!-- Embed images and icons as Resources -->
+  <ItemGroup>
+    <Resource Include="Assets\**\*.jpg" />
+    <Resource Include="Assets\**\*.jpeg" />
+    <Resource Include="Assets\**\*.png" />
+    <Resource Include="Assets\**\*.ico" />
+    <Resource Include="Assets\**\*.svg" />
+  </ItemGroup>
+
+  <!-- NuGet Packages -->
   <ItemGroup>
     <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
     <PackageReference Include="Microsoft.AspNetCore.DataProtection" Version="9.0.4" />

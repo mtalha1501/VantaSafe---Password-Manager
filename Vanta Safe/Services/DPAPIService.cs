@@ -7,7 +7,10 @@ namespace Vanta_Safe.Services
 {
     public static class DPAPIService
     {
-        public static string KeyPath => Path.Combine("DB", "Keys", "db_key.secure"); 
+        public static string KeyPath => Path.Combine(
+            Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
+            "VantaSafe", "Keys", "db_key.secure"
+        );
         private static readonly IDataProtector Protector;
 
         static DPAPIService()

@@ -1,6 +1,7 @@
 ﻿using BCrypt.Net;
 using Microsoft.Data.Sqlite;
 using System;
+using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;

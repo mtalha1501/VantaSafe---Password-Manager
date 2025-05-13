@@ -10,7 +10,7 @@
         WindowState="Maximized"
         >
     <Window.Background>
-        <ImageBrush ImageSource="G:\My CS\Semester 4\ISL\IS Final Project\Vanta Safe\Assets\beg5.jpg" Stretch="Fill"/>
+        <ImageBrush ImageSource="pack://application:,,,/Assets/beg5.jpg" Stretch="Fill"/>
     </Window.Background>
     <Grid>
         <Grid.RowDefinitions>
