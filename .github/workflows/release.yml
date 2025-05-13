@@ -3,7 +3,7 @@ name: Build and Release VantaSafe
 on:
   push:
     tags:
-      - 'v*'  # Runs when a tag like v1.0.0 is pushed
+      - 'v*'
 
 jobs:
   build:
@@ -19,7 +19,7 @@ jobs:
           dotnet-version: '8.0.x'
 
       - name: Publish App (Single EXE)
-        run: dotnet publish "Vanta` Safe/Vanta` Safe.csproj" -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true
+        run: dotnet publish "Vanta Safe/Vanta Safe.csproj" -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true
 
       - name: Upload to GitHub Release
         uses: softprops/action-gh-release@v1
