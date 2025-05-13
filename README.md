@@ -2,7 +2,7 @@
 
 **Your digital vault for bulletproof password management**  
 
-[![Download Installer](https://img.shields.io/badge/Download-Win_x64_Installer-blue?style=for-the-badge&logo=windows)](https://github.com/mtalha/VantaSafe---Password-Manager/OutputInstaller/VantaSafe_Setup.exe)  
+[![Download Installer](https://img.shields.io/badge/Download-Win_x64_Installer-blue?style=for-the-badge&logo=windows)](https://drive.google.com/uc?export=download&id=1zH80TK4tHPl1lGcNU58NW5-hKX2IP78C)  
 
 ---
 
