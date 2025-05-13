@@ -158,7 +158,7 @@ Windows 10/11 (64-bit)
 
 .NET 8.0 Runtime
 
-50MB disk space
+80MB disk space
 
 ## 🆘 Recovery Process
 If locked out:
