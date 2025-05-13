@@ -16,48 +16,7 @@
 
 ---
 
-``` mermaid
-sequenceDiagram
-    actor User as 👤 User
-    participant UI as 🖥️ Vanta UI
-    participant Auth as 🔐 AuthService
-    participant Crypto as 🧮 EncryptDecrypt
-    participant DB as 🗄️ Encrypted DB
-    participant DPAPI as 🛡️ Windows DPAPI
 
-    Note left of User: #FF6B6B;fill:#FFF5F5;stroke:#FF0000
-    User->>UI: #1E90FF;stroke-width:2px;stroke-dasharray:5,5; Enter Master Password
-    UI->>Auth: #32CD32;stroke:#2E8B57; Register(username, password)
-    
-    Auth->>Auth: #FFD700; Generate Device Secret
-    Auth->>Crypto: #9370DB; BCrypt(password + 🔑)
-    Crypto->>Crypto: #FF8C00; PBKDF2(🔑, iter=100k)
-    Auth->>DB: #20B2AA; Store 🗝️⊕📦
-    Auth-->>User: #FF1493; Show 🔑 (ONCE!)
-
-    Note over User,DPAPI: #FFA07A;fill:#FFF5F5; Login Flow
-    User->>UI: #1E90FF; Enter Password
-    UI->>Auth: #32CD32; Verify Creds
-    Auth->>DB: #20B2AA; Get 🗝️⊕📦
-    alt #90EE90;fill:#F0FFF0; Valid
-        Auth->>Crypto: #9370DB; DeriveMasterKey()
-        Crypto-->>UI: #FF69B4; Session Key (RAM💾)
-    else #FF4500;fill:#FFE4E1; Invalid
-        Auth-->>User: #FF0000; 🔒 Lockout!
-    end
-
-    Note over User,DPAPI: #BA55D3;fill:#F5F0FA; Credential Access
-    User->>UI: #1E90FF; Add 🏷️
-    UI->>Crypto: #9370DB; AES-256-CBC🔒
-    Crypto->>DB: #20B2AA; Store 📦
-    User->>UI: #1E90FF; View 🔍
-    UI->>Crypto: #9370DB; AES-256-CBC🔓
-    Crypto-->>User: #FF69B4; 📋 (15s⏳)
-
-    Note over DB,DPAPI: #4682B4;fill:#F0F8FF; Key Protection
-    DB->>DPAPI: #9370DB; Unlock 🔑
-    DPAPI-->>DB: #32CD32; Key⚡
-```
 
 ## 🚀 Getting Started  
 
@@ -71,16 +30,7 @@ sequenceDiagram
 ## 🔐 Security Architecture  
 
 ### Encryption Workflow  
-```mermaid
-graph TD
-    A[Master Password] --> B(BCrypt Hashing)
-    C[Device Secret] --> B
-    B --> D[Secure Database Storage]
-    A --> E(PBKDF2 Key Derivation)
-    C --> E
-    E --> F[AES-256 Encryption]
-    F --> G[Encrypted Credential Storage]
-```
+<pre lang="markdown"> ```mermaid graph TD A[Master Password] --> B(BCrypt Hashing) C[Device Secret] --> B B --> D[Secure Database Storage] A --> E(PBKDF2 Key Derivation) C --> E E --> F[AES-256 Encryption] F --> G[Encrypted Credential Storage] style A fill:#86C7F3,stroke:#333,stroke-width:2px style B fill:#B6D7A8,stroke:#333,stroke-width:2px style C fill:#86C7F3,stroke:#333,stroke-width:2px style D fill:#B6D7A8,stroke:#333,stroke-width:2px style E fill:#86C7F3,stroke:#333,stroke-width:2px style F fill:#B6D7A8,stroke:#333,stroke-width:2px style G fill:#86C7F3,stroke:#333,stroke-width:2px ``` </pre>
 
 ### DATA Workflow
 ``` mermaid
