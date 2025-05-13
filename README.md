@@ -128,7 +128,7 @@ sequenceDiagram
 
 
 ## Key Algorithms Used:
-### BCrypt (with SHA384) - For password hashing (work factor 12)
+- BCrypt (with SHA384) - For password hashing (work factor 12)
 
 - AES-256-CBC - For encrypting sensitive data
 
