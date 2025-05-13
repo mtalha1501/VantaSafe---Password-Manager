@@ -48,13 +48,13 @@ Attack Prevention
 
 📋 Clipboard Risks: Auto-clear mechanism
 
-🖥️ Key Features
+## 🖥️ Key Features
 Feature	Description
 Zero-Knowledge	We never see/store your passwords
 Secure Search	Find credentials without full decryption
 Password Generator	Built-in strong password creator
 Cross-Device Sync	(Future) Encrypted cloud sync
-📦 Installation
+## 📦 Installation
 Windows x64 (.NET 8.0 Required)
 Click the Download Installer button above
 
@@ -64,7 +64,7 @@ Follow the simple wizard (takes < 1 minute)
 
 Launch from your Start Menu
 
-ℹ️ System Requirements:
+## ℹ️ System Requirements:
 
 Windows 10/11 (64-bit)
 
@@ -72,14 +72,14 @@ Windows 10/11 (64-bit)
 
 50MB disk space
 
-🆘 Recovery Process
+## 🆘 Recovery Process
 If locked out:
 
 Click "Recover Account"
 
 Enter your username and device secret
 
-Regain access securely
+## Regain access securely
 
 🔑 Your device secret was shown during registration - store it safely!
 
@@ -90,9 +90,9 @@ Regain access securely
 
 🚀 Optimized installer package
 
-🛡️ Enhanced encryption routines
+##🛡️ Enhanced encryption routines
 
-🤝 Contribute
+##🤝 Contribute
 Found an issue? Want to improve security?
 Open an Issue
 
