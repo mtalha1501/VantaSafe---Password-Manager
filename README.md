@@ -39,6 +39,92 @@ graph TD
     F --> G[Encrypted Credential Storage]
 ```
 
+### DATA Workflow
+``` mermaid
+graph TD
+    %% Entities
+    User((User))
+    Database[(Encrypted Database)]
+    WindowsDPAPI[Windows DPAPI]
+
+    %% Processes
+    subgraph Vanta Safe
+        A[Registration]
+        B[Login]
+        C[Credential Management]
+        D[Encryption/Decryption]
+    end
+
+    %% Data Flows
+    User -->|Master Password| A
+    User -->|Master Password| B
+    User -->|Add/Edit Credentials| C
+
+    A -->|Device Secret| User
+    A -->|Hashed Password + Encrypted Keys| Database
+
+    B -->|Session Master Key| C
+    B -->|Lockout Signal| User
+
+    C -->|Encrypted Credentials| Database
+    C -->|Decrypted Credentials| User
+
+    D -->|AES-256 Keys| WindowsDPAPI
+    WindowsDPAPI -->|Protected Keys| Database
+
+    %% Legend
+    legend[<u>Legend</u>:
+    <br>○ = External Entity
+    <br>□ = Process
+    <br>⦿ = Data Store]
+```
+### Sequence Diagram
+``` mermaid
+sequenceDiagram
+    participant User
+    participant UI as Vanta UI
+    participant Auth as AuthService
+    participant Crypto as EncryptDecrypt
+    participant DB as Encrypted DB
+    participant DPAPI as Windows DPAPI
+
+    Note over User,DPAPI: Registration Flow
+    User->>UI: Enters master password
+    UI->>Auth: Register(username, password)
+    Auth->>Auth: Generate device_secret
+    Auth->>Crypto: BCrypt(password + device_secret)
+    Auth->>Crypto: DeriveKey(device_secret)
+    Crypto->>Crypto: PBKDF2(device_secret, iterations=100k)
+    Auth->>Crypto: EncryptMasterKey(password, aes_key)
+    Crypto->>DB: Store hashed_pw + encrypted_master_key
+    Auth->>User: Show device_secret (once)
+
+    Note over User,DPAPI: Login Flow
+    User->>UI: Enters password
+    UI->>Auth: Login(username, password)
+    Auth->>DB: Get hashed_pw + device_secret
+    Auth->>Auth: BCryptVerify(password + device_secret)
+    Auth->>Crypto: DeriveMasterKey(password, device_secret)
+    Crypto->>Crypto: PBKDF2(password + device_secret)
+    Auth->>UI: Session established (master_key in RAM)
+
+    Note over User,DPAPI: Credential Access
+    User->>UI: Requests "Add Credential"
+    UI->>Crypto: EncryptField(site_password, master_key)
+    Crypto->>Crypto: AES-256-CBC with random IV
+    UI->>DB: Store encrypted_credential
+    User->>UI: Requests "View Password"
+    UI->>DB: Get encrypted_credential
+    UI->>Crypto: DecryptField(ciphertext, master_key)
+    Crypto->>UI: Plaintext (15s clipboard timeout)
+
+    Note over User,DPAPI: Security Backbone
+    DB->>DPAPI: Request DB encryption key
+    DPAPI-->>DB: Unprotected key (in memory)
+    UI->>UI: ZeroMemory(plaintext)
+```
+
+
 ## Attack Prevention
 🛡️ SQL Injection: Parameterized queries
 
