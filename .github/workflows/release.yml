@@ -19,13 +19,12 @@ jobs:
           dotnet-version: '8.0.x'
 
       - name: Publish App (Single EXE)
-        run: dotnet publish "./Vanta Safe/Vanta Safe.csproj" -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true
-        working-directory: ${{ github.workspace }}
+        run: dotnet publish "Vanta Safe/Vanta Safe.csproj" -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true
 
       - name: Upload to GitHub Release
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            bin/Release/net8.0-windows/win-x64/publish/Vanta Safe.exe
+            Vanta Safe/bin/Release/net8.0-windows/win-x64/publish/Vanta Safe.exe
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
