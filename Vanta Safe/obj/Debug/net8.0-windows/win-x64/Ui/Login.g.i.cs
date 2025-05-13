@@ -109,7 +109,7 @@ namespace Vanta_Safe.Ui {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Vanta Safe;component/ui/login.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/VantaSafe;V1.0.0.0;component/ui/login.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Ui\Login.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

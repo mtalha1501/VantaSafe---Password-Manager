@@ -148,7 +148,7 @@ namespace Vanta_Safe.Ui {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Vanta Safe;V1.0.0.0;component/ui/registerwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/VantaSafe;V1.0.0.0;component/ui/registerwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Ui\RegisterWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

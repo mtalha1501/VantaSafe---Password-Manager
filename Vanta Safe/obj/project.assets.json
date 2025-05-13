@@ -1963,9 +1963,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Vanta Safe.csproj",
-      "projectName": "Vanta Safe",
-      "projectPath": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Vanta Safe.csproj",
+      "projectUniqueName": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\VantaSafe.csproj",
+      "projectName": "VantaSafe",
+      "projectPath": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\VantaSafe.csproj",
       "packagesPath": "C:\\Users\\Talha\\.nuget\\packages\\",
       "outputPath": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\obj\\",
       "projectStyle": "PackageReference",

@@ -93,7 +93,7 @@ namespace Vanta_Safe {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Vanta Safe;component/ui/editcredential.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/VantaSafe;V1.0.0.0;component/ui/editcredential.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Ui\EditCredential.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

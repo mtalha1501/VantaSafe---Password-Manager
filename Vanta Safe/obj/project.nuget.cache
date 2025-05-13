@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3eeqKBgT/Od7vPLqzaxiSAuK/EmYMxbetEge6Q89geTvn0rAemJeKNY0j/eh6l1jQo8k1ucPBJ3QMkcfDG4w7g==",
+  "dgSpecHash": "5xYZXNqOkbcMAjYB6ClCBdDtHToHPSwxvRlKIO66NEt4HT0/DClxE2R4yARAOal6nbbmK64swuKrYvkAIkVuQA==",
   "success": true,
-  "projectFilePath": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\Vanta Safe.csproj",
+  "projectFilePath": "G:\\My CS\\Semester 4\\ISL\\IS Final Project\\Vanta Safe\\VantaSafe.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Talha\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\Talha\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\9.0.4\\microsoft.aspnetcore.cryptography.internal.9.0.4.nupkg.sha512",
