@@ -211,6 +211,10 @@ Enter your username and device secret
 - Just run "dotnet publish -c Release" on terminal
 - Then run the EXE file in \bin\Release\net8.0-windows\win-x64\publish\Vanta Safe.exe
 - Now Project will run, it won't run on starting in VS, you can configure VantaSafe.csproj file for runing.
+- Required Nuget Packages:
+- ![image](https://github.com/user-attachments/assets/ead94fb9-868d-456f-a6ac-36980a082597)
+
+
 ---
 💎 Your Security Is Our Top Priority
 "In a world of digital threats, Vanta Safe stands guard"
