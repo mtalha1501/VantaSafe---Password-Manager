@@ -90,9 +90,9 @@ Enter your username and device secret
 
 🚀 Optimized installer package
 
-##🛡️ Enhanced encryption routines
+## 🛡️ Enhanced encryption routines
 
-##🤝 Contribute
+# 🤝 Contribute
 Found an issue? Want to improve security?
 Open an Issue
 
