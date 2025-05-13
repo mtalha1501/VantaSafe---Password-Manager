@@ -37,6 +37,7 @@ graph TD
     C --> E
     E --> F[AES-256 Encryption]
     F --> G[Encrypted Credential Storage]
+```
 
 Attack Prevention
 🛡️ SQL Injection: Parameterized queries
