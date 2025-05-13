@@ -130,13 +130,13 @@ sequenceDiagram
 ## Key Algorithms Used:
 ### BCrypt (with SHA384) - For password hashing (work factor 12)
 
-### AES-256-CBC - For encrypting sensitive data
+- AES-256-CBC - For encrypting sensitive data
 
-### PBKDF2 - For key derivation (100,000 iterations)
+- PBKDF2 - For key derivation (100,000 iterations)
 
-### HMAC-SHA256 - For generating credential hashes
+- HMAC-SHA256 - For generating credential hashes
 
-### DPAPI - For protecting the SQLite database key
+- DPAPI - For protecting the SQLite database key
 
 ## Attack Prevention
 🛡️ SQL Injection: Parameterized queries
