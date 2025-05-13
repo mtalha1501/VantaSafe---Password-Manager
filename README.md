@@ -192,31 +192,27 @@ Enter your username and device secret
 
 ## Regain access securely
 
-🔑 Your device secret was shown during registration - store it safely!
+🔑 Your device secret was shown during registration - store it safely! 
+🛡️ Use it in Acccount Recovery 
 
-📜 Changelog (v2.1)
+##📜 Changelog (v1.0.1)
 ⬆️ Upgraded to .NET 8.0
 
 🏷️ Added explicit x64 support
 
 🚀 Optimized installer package
 
-## 🛡️ Enhanced encryption routines
+🛡️ Enhanced encryption routines
 
-# 🤝 Contribute
-Found an issue? Want to improve security?
-Open an Issue
 ---
 ## Runing on Visual Studio (For Developers)
 - build the project
 - Just run "dotnet publish -c Release" on terminal
-- Then run the EXE file in \bin\Release\net8.0-windows\win-x64\publish\Vanta SAfe.exe
+- Then run the EXE file in \bin\Release\net8.0-windows\win-x64\publish\Vanta Safe.exe
 - Now Project will run, it won't run on starting in VS, you can configure VantaSafe.csproj file for runing.
 ---
 💎 Your Security Is Our Top Priority
 "In a world of digital threats, Vanta Safe stands guard"
-
-Download Now
 
 Offline • Secure • Uncompromising
 
