@@ -39,7 +39,7 @@ graph TD
     F --> G[Encrypted Credential Storage]
 ```
 
-Attack Prevention
+## Attack Prevention
 🛡️ SQL Injection: Parameterized queries
 
 💣 Brute Force: Account lockout + slow hashing
