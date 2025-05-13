@@ -2,7 +2,7 @@
 
 **Your digital vault for bulletproof password management**  
 
-[![Download Installer](https://img.shields.io/badge/Download-Win_x64_Installer-blue?style=for-the-badge&logo=windows)](https://github.com/mtalha/VantaSafe---Password-Manager/OutputInstaller/VantaSafe_Setup.exe)  
+[![Download Installer](https://img.shields.io/badge/Download-Win_x64_Installer-blue?style=for-the-badge&logo=windows)](https://drive.google.com/uc?export=download&id=1zH80TK4tHPl1lGcNU58NW5-hKX2IP78C)  
 
 ---
 
@@ -37,8 +37,9 @@ graph TD
     C --> E
     E --> F[AES-256 Encryption]
     F --> G[Encrypted Credential Storage]
+```
 
-Attack Prevention
+## Attack Prevention
 🛡️ SQL Injection: Parameterized queries
 
 💣 Brute Force: Account lockout + slow hashing
@@ -47,13 +48,13 @@ Attack Prevention
 
 📋 Clipboard Risks: Auto-clear mechanism
 
-🖥️ Key Features
+## 🖥️ Key Features
 Feature	Description
 Zero-Knowledge	We never see/store your passwords
 Secure Search	Find credentials without full decryption
 Password Generator	Built-in strong password creator
 Cross-Device Sync	(Future) Encrypted cloud sync
-📦 Installation
+## 📦 Installation
 Windows x64 (.NET 8.0 Required)
 Click the Download Installer button above
 
@@ -63,7 +64,7 @@ Follow the simple wizard (takes < 1 minute)
 
 Launch from your Start Menu
 
-ℹ️ System Requirements:
+## ℹ️ System Requirements:
 
 Windows 10/11 (64-bit)
 
@@ -71,14 +72,14 @@ Windows 10/11 (64-bit)
 
 50MB disk space
 
-🆘 Recovery Process
+## 🆘 Recovery Process
 If locked out:
 
 Click "Recover Account"
 
 Enter your username and device secret
 
-Regain access securely
+## Regain access securely
 
 🔑 Your device secret was shown during registration - store it safely!
 
@@ -89,9 +90,9 @@ Regain access securely
 
 🚀 Optimized installer package
 
-🛡️ Enhanced encryption routines
+## 🛡️ Enhanced encryption routines
 
-🤝 Contribute
+# 🤝 Contribute
 Found an issue? Want to improve security?
 Open an Issue
 
