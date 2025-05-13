@@ -126,6 +126,16 @@ sequenceDiagram
     UI->>UI: ZeroMemory(plaintext)
 ```
 
+## References (International Security Policies)
+1) OWASP Password Storage Cheat Sheet
+
+2) NIST Special Publication 800-63B (Digital Identity Guidelines)
+
+3) SQLite Encryption Extension Documentation
+
+4) Microsoft DPAPI Documentation
+
+5) RFC 2898 (PBKDF2 specification)
 
 ## Key Algorithms Used:
 - BCrypt (with SHA384) - For password hashing (work factor 12)
