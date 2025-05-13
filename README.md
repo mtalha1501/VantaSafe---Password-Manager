@@ -30,7 +30,16 @@
 ## 🔐 Security Architecture  
 
 ### Encryption Workflow  
- ```mermaid graph TD A[Master Password] --> B(BCrypt Hashing) C[Device Secret] --> B B --> D[Secure Database Storage] A --> E(PBKDF2 Key Derivation) C --> E E --> F[AES-256 Encryption] F --> G[Encrypted Credential Storage] style A fill:#86C7F3,stroke:#333,stroke-width:2px style B fill:#B6D7A8,stroke:#333,stroke-width:2px style C fill:#86C7F3,stroke:#333,stroke-width:2px style D fill:#B6D7A8,stroke:#333,stroke-width:2px style E fill:#86C7F3,stroke:#333,stroke-width:2px style F fill:#B6D7A8,stroke:#333,stroke-width:2px style G fill:#86C7F3,stroke:#333,stroke-width:2px ``` 
+ ```mermaid 
+graph TD
+    A[Master Password] --> B(BCrypt Hashing)
+    C[Device Secret] --> B
+    B --> D[Secure Database Storage]
+    A --> E(PBKDF2 Key Derivation)
+    C --> E
+    E --> F[AES-256 Encryption]
+    F --> G[Encrypted Credential Storage]
+``` 
 
 ### DATA Workflow
 ``` mermaid
